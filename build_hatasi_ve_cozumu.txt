@@ -1,0 +1,51 @@
+Build Hatası ve Çözümü (Local APK)
+=================================
+
+1) Aldığımız Hata
+-----------------
+Gradle build sırasında şu hata alındı:
+
+FAILURE: Build failed with an exception.
+
+* Where:
+Build file 'C:\Users\90552\Desktop\Mobile Apps\BallWorld\android\build.gradle' line: 24
+
+* What went wrong:
+A problem occurred evaluating root project 'Galaksi Küreleri'.
+> Failed to apply plugin 'com.facebook.react.rootproject'.
+   > A problem occurred configuring project ':app'.
+      > Trailing char < > at index 40: C:\Users\90552\AppData\Local\Android\Sdk 
+
+Bu mesajdaki önemli ipucu: Android SDK yolunun sonunda görünmeyen bir boşluk var.
+
+2) Kök Neden
+------------
+`android/local.properties` dosyasındaki `sdk.dir` satırının sonunda fazladan bir boşluk (trailing space) vardı:
+
+sdk.dir=C:/Users/90552/AppData/Local/Android/Sdk␠
+
+Bu boşluk Gradle tarafında path parse ederken "Trailing char" hatasına sebep oldu.
+
+3) Çözüm
+--------
+`android/local.properties` içindeki `sdk.dir` satırının sonundaki boşluk silindi:
+
+sdk.dir=C:/Users/90552/AppData/Local/Android/Sdk
+
+4) Tekrar Build Alma
+--------------------
+Release APK için:
+
+PowerShell:
+  cd android
+  $env:NODE_ENV='production'
+  .\gradlew.bat assembleRelease
+
+Alternatif (projedeki script):
+  .\build_apk.bat
+
+5) Çıktı (APK)
+--------------
+Oluşan APK:
+  android\app\build\outputs\apk\release\app-release.apk
+
