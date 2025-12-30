@@ -5,9 +5,8 @@
  * Expo SDK 54 / React Native
  * 
  * Reklam Entegrasyonu:
- * - Banner: Menü ve Game Over ekranında
- * - Interstitial: Her 3 oyunda bir
- * - Rewarded: İkinci şans ve 2x skor
+ * - Banner: Ana giriş ve Game Over ekranında
+ * - Interstitial: Her 3 oyunda bir (oyun bittiğinde)
  * 
  * © 2025 - Created by Alp Eren Çelebi
  */
@@ -72,14 +71,8 @@ function AppContent() {
     drop: false,
   });
 
-  // Reklam state'leri
-  const [canContinue, setCanContinue] = useState(true); // İkinci şans kullanılabilir mi
-  const [scoreMultiplied, setScoreMultiplied] = useState(false); // 2x skor kullanıldı mı
-  const [isRewardedReady, setIsRewardedReady] = useState(false);
-  
-  // GameBoard ref (devam etmek için)
+  // GameBoard ref
   const gameBoardRef = useRef(null);
-  const lastScoreRef = useRef(0); // Son skor (2x için)
 
   // Uygulama başladığında veritabanını, ses ve reklamları yükle
   useEffect(() => {
@@ -90,16 +83,9 @@ function AppContent() {
         const savedHighScore = await getHighScore();
         setHighScore(savedHighScore);
         console.log('📊 Kayıtlı rekor yüklendi:', savedHighScore);
-        
+
         // Reklamları başlat
         adManager.initialize();
-        
-        // Rewarded reklam durumunu kontrol et
-        const checkRewardedInterval = setInterval(() => {
-          setIsRewardedReady(adManager.isRewardedReady());
-        }, 1000);
-        
-        return () => clearInterval(checkRewardedInterval);
       } catch (error) {
         console.error('Yükleme hatası:', error);
       }
@@ -112,18 +98,11 @@ function AppContent() {
     };
   }, []);
 
-  // Skor değiştiğinde ref'i güncelle
-  useEffect(() => {
-    lastScoreRef.current = score;
-  }, [score]);
-
   // Oyunu başlat
   const startGame = useCallback(() => {
     soundManager.playClick();
     setScore(0);
     setIsPaused(false);
-    setCanContinue(true);
-    setScoreMultiplied(false);
     setGameState(GAME_STATES.PLAYING);
   }, []);
 
@@ -153,57 +132,14 @@ function AppContent() {
   // Tekrar oyna (interstitial reklam göster)
   const handleRetry = useCallback(async () => {
     soundManager.playClick();
-    
+
     // Interstitial reklam göster (her 3 oyunda bir)
     await adManager.showInterstitialIfReady();
-    
+
     startGame();
   }, [startGame]);
 
-  // ============================================
-  // REWARDED REKLAM FONKSİYONLARI
-  // ============================================
 
-  // İkinci şans - Reklam izle, oyuna devam et
-  const handleSecondChance = useCallback(async () => {
-    soundManager.playClick();
-    
-    const shown = await adManager.showRewarded(() => {
-      // Ödül kazanıldı - oyuna devam et
-      console.log('🎁 İkinci şans ödülü alındı!');
-      setCanContinue(false); // Bir kez kullanılabilir
-      setGameState(GAME_STATES.PLAYING);
-      // NOT: GameBoard'da devam mantığı eklenmeli
-    });
-    
-    if (!shown) {
-      // Reklam gösterilemedi
-      console.log('⚠️ Reklam henüz hazır değil');
-    }
-  }, []);
-
-  // 2x Skor - Reklam izle, skoru 2 katına çıkar
-  const handleDoubleScore = useCallback(async () => {
-    soundManager.playClick();
-    
-    const shown = await adManager.showRewarded(() => {
-      // Ödül kazanıldı - skoru 2 katına çıkar
-      console.log('🎁 2x skor ödülü alındı!');
-      const doubledScore = lastScoreRef.current * 2;
-      setScore(doubledScore);
-      setScoreMultiplied(true);
-      
-      // Yeni rekor kontrolü
-      if (doubledScore > highScore) {
-        setHighScore(doubledScore);
-        saveScore(doubledScore);
-      }
-    });
-    
-    if (!shown) {
-      console.log('⚠️ Reklam henüz hazır değil');
-    }
-  }, [highScore]);
 
   // Kontrol handler'ları
   const handleLeftPress = useCallback(() => {
@@ -269,38 +205,10 @@ function AppContent() {
               <Text style={styles.finalScoreLabel}>{t('finalScore')}</Text>
               <Text style={styles.finalScoreValue}>
                 {score.toLocaleString()}
-                {scoreMultiplied && <Text style={styles.multipliedBadge}> x2</Text>}
               </Text>
               {score >= highScore && score > 0 && (
                 <Text style={styles.newRecord}>{t('newRecord')}</Text>
               )}
-              
-              {/* Rewarded Reklam Butonları */}
-              <View style={styles.rewardedButtons}>
-                {/* İkinci Şans Butonu */}
-                {canContinue && (
-                  <TouchableOpacity
-                    style={[styles.rewardedButton, styles.continueButton]}
-                    onPress={handleSecondChance}
-                    activeOpacity={0.8}
-                  >
-                    <Text style={styles.rewardedButtonIcon}>🎬</Text>
-                    <Text style={styles.rewardedButtonText}>{t('secondChance') || 'İkinci Şans'}</Text>
-                  </TouchableOpacity>
-                )}
-                
-                {/* 2x Skor Butonu */}
-                {!scoreMultiplied && (
-                  <TouchableOpacity
-                    style={[styles.rewardedButton, styles.doubleButton]}
-                    onPress={handleDoubleScore}
-                    activeOpacity={0.8}
-                  >
-                    <Text style={styles.rewardedButtonIcon}>🎬</Text>
-                    <Text style={styles.rewardedButtonText}>{t('doubleScore') || '2x Skor'}</Text>
-                  </TouchableOpacity>
-                )}
-              </View>
             </View>
           )}
 
@@ -405,11 +313,6 @@ const styles = StyleSheet.create({
     textShadowOffset: { width: 0, height: 0 },
     textShadowRadius: 10,
   },
-  multipliedBadge: {
-    fontSize: 24,
-    color: '#FFD700',
-    fontWeight: 'bold',
-  },
   newRecord: {
     fontSize: 16,
     color: '#FFD700',
@@ -418,36 +321,6 @@ const styles = StyleSheet.create({
     textShadowColor: 'rgba(255, 215, 0, 0.5)',
     textShadowOffset: { width: 0, height: 0 },
     textShadowRadius: 10,
-  },
-  rewardedButtons: {
-    flexDirection: 'row',
-    marginTop: 15,
-    gap: 10,
-  },
-  rewardedButton: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    paddingHorizontal: 15,
-    paddingVertical: 10,
-    borderRadius: 25,
-    borderWidth: 2,
-  },
-  continueButton: {
-    backgroundColor: 'rgba(76, 175, 80, 0.2)',
-    borderColor: '#4CAF50',
-  },
-  doubleButton: {
-    backgroundColor: 'rgba(255, 193, 7, 0.2)',
-    borderColor: '#FFC107',
-  },
-  rewardedButtonIcon: {
-    fontSize: 16,
-    marginRight: 6,
-  },
-  rewardedButtonText: {
-    fontSize: 12,
-    fontWeight: 'bold',
-    color: '#FFFFFF',
   },
   startButton: {
     backgroundColor: '#4ECDC4',

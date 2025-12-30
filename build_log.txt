@@ -1,11 +1,11 @@
-﻿> Task :gradle-plugin:shared:checkKotlinGradlePluginConfigurationErrors SKIPPED
+﻿> Task :expo-gradle-plugin:expo-autolinking-settings-plugin:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :gradle-plugin:shared:checkKotlinGradlePluginConfigurationErrors SKIPPED
 > Task :expo-gradle-plugin:expo-autolinking-plugin-shared:checkKotlinGradlePluginConfigurationErrors SKIPPED
 > Task :gradle-plugin:settings-plugin:checkKotlinGradlePluginConfigurationErrors SKIPPED
-> Task :expo-gradle-plugin:expo-autolinking-settings-plugin:checkKotlinGradlePluginConfigurationErrors SKIPPED
-> Task :expo-gradle-plugin:expo-autolinking-settings-plugin:pluginDescriptors UP-TO-DATE
 > Task :gradle-plugin:settings-plugin:pluginDescriptors UP-TO-DATE
-> Task :expo-gradle-plugin:expo-autolinking-settings-plugin:processResources UP-TO-DATE
+> Task :expo-gradle-plugin:expo-autolinking-settings-plugin:pluginDescriptors UP-TO-DATE
 > Task :gradle-plugin:settings-plugin:processResources UP-TO-DATE
+> Task :expo-gradle-plugin:expo-autolinking-settings-plugin:processResources UP-TO-DATE
 > Task :gradle-plugin:shared:compileKotlin UP-TO-DATE
 > Task :expo-gradle-plugin:expo-autolinking-plugin-shared:compileKotlin UP-TO-DATE
 > Task :gradle-plugin:shared:compileJava NO-SOURCE
@@ -30,17 +30,17 @@
 > Task :expo-module-gradle-plugin:pluginDescriptors UP-TO-DATE
 > Task :expo-module-gradle-plugin:processResources UP-TO-DATE
 > Task :expo-gradle-plugin:expo-autolinking-plugin:compileKotlin UP-TO-DATE
-> Task :expo-gradle-plugin:expo-autolinking-plugin:compileJava NO-SOURCE
 > Task :gradle-plugin:react-native-gradle-plugin:compileKotlin UP-TO-DATE
-> Task :expo-gradle-plugin:expo-autolinking-plugin:pluginDescriptors UP-TO-DATE
+> Task :expo-gradle-plugin:expo-autolinking-plugin:compileJava NO-SOURCE
 > Task :gradle-plugin:react-native-gradle-plugin:compileJava NO-SOURCE
-> Task :expo-gradle-plugin:expo-autolinking-plugin:processResources UP-TO-DATE
+> Task :expo-gradle-plugin:expo-autolinking-plugin:pluginDescriptors UP-TO-DATE
 > Task :gradle-plugin:react-native-gradle-plugin:pluginDescriptors UP-TO-DATE
+> Task :expo-gradle-plugin:expo-autolinking-plugin:processResources UP-TO-DATE
 > Task :expo-gradle-plugin:expo-autolinking-plugin:classes UP-TO-DATE
 > Task :gradle-plugin:react-native-gradle-plugin:processResources UP-TO-DATE
 > Task :gradle-plugin:react-native-gradle-plugin:classes UP-TO-DATE
-> Task :expo-gradle-plugin:expo-autolinking-plugin:jar UP-TO-DATE
 > Task :gradle-plugin:react-native-gradle-plugin:jar UP-TO-DATE
+> Task :expo-gradle-plugin:expo-autolinking-plugin:jar UP-TO-DATE
 > Task :expo-module-gradle-plugin:compileKotlin UP-TO-DATE
 > Task :expo-module-gradle-plugin:compileJava NO-SOURCE
 > Task :expo-module-gradle-plugin:classes UP-TO-DATE
@@ -71,6 +71,36 @@ Using expo modules
   - [33m[?][0m [32mexpo-system-ui[0m (6.0.9)
 
 
+> Configure project :react-native-google-mobile-ads
+:react-native-google-mobile-ads package.json found at C:\Users\90552\Desktop\Mobile Apps\BallWorld\node_modules\react-native-google-mobile-ads\package.json
+
+
+
+
+**************************************************************************************************************
+
+
+
+
+WARNING: react-native-google-mobile-ads requires an 'android_app_id' property inside a 'react-native-google-mobile-ads' key in your app.json.
+         No android_app_id property was found in this location. The native Google Mobile Ads SDK will crash on startup without it.
+         You can safely ignore this warning if you are using our Expo config plugin.
+
+
+
+
+**************************************************************************************************************
+
+
+
+
+:react-native-google-mobile-ads package.json found at C:\Users\90552\Desktop\Mobile Apps\BallWorld\node_modules\react-native-google-mobile-ads\package.json
+:react-native-google-mobile-ads:version set from package.json: 16.0.1 (16,0,1 - 16000001)
+:react-native-google-mobile-ads:android.compileSdk using custom value: 36
+:react-native-google-mobile-ads:android.targetSdk using custom value: 36
+:react-native-google-mobile-ads:android.minSdk using custom value: 24
+:react-native-google-mobile-ads:reactNativeAndroidDir C:\Users\90552\Desktop\Mobile Apps\BallWorld\node_modules\react-native
+
 > Task :expo-modules-core:preBuild UP-TO-DATE
 > Task :expo-modules-core:preReleaseBuild UP-TO-DATE
 > Task :app:generateAutolinkingNewArchitectureFiles
@@ -78,100 +108,139 @@ Using expo modules
 > Task :app:generateCodegenSchemaFromJavaScript SKIPPED
 > Task :app:generateCodegenArtifactsFromSchema SKIPPED
 > Task :app:generateReactNativeEntryPoint
-> Task :expo-constants:createExpoConfig
-> Task :expo-constants:preBuild
-> Task :expo-constants:preReleaseBuild
 > Task :app:buildKotlinToolingMetadata
 > Task :app:checkKotlinGradlePluginConfigurationErrors SKIPPED
-> Task :react-native-async-storage_async-storage:generateCodegenSchemaFromJavaScript
+> Task :expo-modules-core:configureCMakeRelWithDebInfo[arm64-v8a]
+
+> Task :expo-constants:createExpoConfig
+The NODE_ENV environment variable is required but was not specified. Ensure the project is bundled with Expo CLI or NODE_ENV is set. Using only .env.local and .env
+
+> Task :expo-constants:preBuild
+> Task :expo-constants:preReleaseBuild
 > Task :expo-constants:mergeReleaseJniLibFolders
 > Task :expo-constants:mergeReleaseNativeLibs NO-SOURCE
-> Task :react-native-safe-area-context:generateCodegenSchemaFromJavaScript
 > Task :expo-constants:checkKotlinGradlePluginConfigurationErrors SKIPPED
 > Task :expo-constants:copyReleaseJniLibsProjectOnly
 > Task :expo-constants:generateReleaseBuildConfig
 > Task :expo-constants:generateReleaseResValues
 > Task :expo-constants:generateReleaseResources
 > Task :expo-constants:packageReleaseResources
+> Task :react-native-async-storage_async-storage:generateCodegenSchemaFromJavaScript
+> Task :react-native-safe-area-context:generateCodegenSchemaFromJavaScript
+> Task :react-native-google-mobile-ads:generateCodegenSchemaFromJavaScript
 > Task :expo-constants:javaPreCompileRelease
+> Task :expo-constants:parseReleaseLocalResources
 > Task :expo-constants:writeReleaseAarMetadata
 > Task :expo-constants:extractDeepLinksRelease
-> Task :expo-constants:parseReleaseLocalResources
-> Task :react-native-async-storage_async-storage:generateCodegenArtifactsFromSchema
-> Task :react-native-async-storage_async-storage:preBuild
-> Task :react-native-async-storage_async-storage:preReleaseBuild
-> Task :react-native-safe-area-context:generateCodegenArtifactsFromSchema
-> Task :react-native-safe-area-context:preBuild
-> Task :react-native-safe-area-context:preReleaseBuild
-> Task :react-native-async-storage_async-storage:mergeReleaseJniLibFolders
-> Task :react-native-async-storage_async-storage:mergeReleaseNativeLibs NO-SOURCE
-> Task :react-native-safe-area-context:mergeReleaseJniLibFolders
-> Task :react-native-async-storage_async-storage:copyReleaseJniLibsProjectOnly
-> Task :react-native-safe-area-context:mergeReleaseNativeLibs NO-SOURCE
-> Task :react-native-safe-area-context:checkKotlinGradlePluginConfigurationErrors SKIPPED
-> Task :react-native-safe-area-context:copyReleaseJniLibsProjectOnly
-> Task :react-native-async-storage_async-storage:generateReleaseBuildConfig
-> Task :react-native-async-storage_async-storage:generateReleaseResValues
-> Task :react-native-safe-area-context:generateReleaseBuildConfig
-> Task :react-native-safe-area-context:generateReleaseResValues
-> Task :react-native-async-storage_async-storage:generateReleaseResources
-> Task :react-native-safe-area-context:generateReleaseResources
-> Task :react-native-async-storage_async-storage:packageReleaseResources
-> Task :react-native-safe-area-context:packageReleaseResources
-> Task :react-native-async-storage_async-storage:javaPreCompileRelease
-> Task :react-native-async-storage_async-storage:parseReleaseLocalResources
-> Task :react-native-async-storage_async-storage:writeReleaseAarMetadata
-> Task :react-native-safe-area-context:javaPreCompileRelease
-> Task :react-native-safe-area-context:writeReleaseAarMetadata
-> Task :react-native-safe-area-context:parseReleaseLocalResources
-> Task :react-native-safe-area-context:extractDeepLinksRelease
-> Task :react-native-async-storage_async-storage:extractDeepLinksRelease
-> Task :react-native-safe-area-context:prepareReleaseArtProfile
+> Task :expo-constants:generateReleaseRFile
+> Task :expo-constants:processReleaseManifest
+> Task :expo-constants:compileReleaseLibraryResources
 > Task :expo-constants:prepareReleaseArtProfile
-> Task :react-native-async-storage_async-storage:prepareReleaseArtProfile
 > Task :expo-constants:mergeReleaseShaders
 > Task :expo-constants:compileReleaseShaders NO-SOURCE
-> Task :react-native-safe-area-context:mergeReleaseShaders
 > Task :expo-constants:generateReleaseAssets UP-TO-DATE
-> Task :react-native-safe-area-context:compileReleaseShaders NO-SOURCE
-> Task :react-native-safe-area-context:generateReleaseAssets UP-TO-DATE
-> Task :react-native-async-storage_async-storage:mergeReleaseShaders
-> Task :react-native-async-storage_async-storage:compileReleaseShaders NO-SOURCE
-> Task :react-native-async-storage_async-storage:generateReleaseAssets UP-TO-DATE
-> Task :expo-constants:compileReleaseLibraryResources
-> Task :react-native-async-storage_async-storage:compileReleaseLibraryResources
-> Task :react-native-safe-area-context:compileReleaseLibraryResources
-> Task :react-native-safe-area-context:mergeReleaseAssets
-> Task :react-native-async-storage_async-storage:mergeReleaseAssets
-> Task :react-native-async-storage_async-storage:processReleaseJavaRes NO-SOURCE
-> Task :react-native-async-storage_async-storage:generateReleaseRFile
-> Task :react-native-safe-area-context:generateReleaseRFile
-> Task :expo-constants:generateReleaseRFile
 > Task :expo-constants:mergeReleaseAssets
 > Task :expo-constants:extractProguardFiles
-> Task :react-native-async-storage_async-storage:extractProguardFiles
-> Task :react-native-safe-area-context:extractProguardFiles
+> Task :expo-constants:prepareLintJarForPublish
 > Task :expo-constants:stripReleaseDebugSymbols NO-SOURCE
 > Task :expo-constants:copyReleaseJniLibsProjectAndLocalJars
-> Task :expo-constants:prepareLintJarForPublish
 > Task :expo-constants:extractDeepLinksForAarRelease
 > Task :expo-constants:writeReleaseLintModelMetadata
 > Task :expo-constants:mapReleaseSourceSetPaths
 > Task :expo-constants:mergeReleaseResources
-
-> Task :react-native-safe-area-context:processReleaseManifest
-package="com.th3rdwave.safeareacontext" found in source AndroidManifest.xml: C:\Users\90552\Desktop\Mobile Apps\BallWorld\node_modules\react-native-safe-area-context\android\src\main\AndroidManifest.xml.
-Setting the namespace via the package attribute in the source AndroidManifest.xml is no longer supported, and the value is ignored.
-Recommendation: remove package="com.th3rdwave.safeareacontext" from the source AndroidManifest.xml: C:\Users\90552\Desktop\Mobile Apps\BallWorld\node_modules\react-native-safe-area-context\android\src\main\AndroidManifest.xml.
-
-> Task :expo-constants:processReleaseManifest
+> Task :react-native-async-storage_async-storage:generateCodegenArtifactsFromSchema
+> Task :react-native-async-storage_async-storage:preBuild
+> Task :react-native-async-storage_async-storage:preReleaseBuild
+> Task :react-native-async-storage_async-storage:mergeReleaseJniLibFolders
+> Task :react-native-async-storage_async-storage:mergeReleaseNativeLibs NO-SOURCE
+> Task :react-native-async-storage_async-storage:copyReleaseJniLibsProjectOnly
+> Task :expo-constants:verifyReleaseResources
+> Task :react-native-safe-area-context:generateCodegenArtifactsFromSchema
+> Task :react-native-safe-area-context:preBuild
+> Task :react-native-safe-area-context:preReleaseBuild
+> Task :react-native-safe-area-context:mergeReleaseJniLibFolders
+> Task :react-native-safe-area-context:mergeReleaseNativeLibs NO-SOURCE
+> Task :react-native-async-storage_async-storage:generateReleaseBuildConfig
+> Task :react-native-async-storage_async-storage:generateReleaseResValues
+> Task :react-native-safe-area-context:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :react-native-safe-area-context:copyReleaseJniLibsProjectOnly
+> Task :react-native-google-mobile-ads:generateCodegenArtifactsFromSchema
+> Task :react-native-google-mobile-ads:preBuild
+> Task :react-native-google-mobile-ads:preReleaseBuild
+> Task :react-native-async-storage_async-storage:generateReleaseResources
+> Task :react-native-google-mobile-ads:mergeReleaseJniLibFolders
+> Task :react-native-google-mobile-ads:mergeReleaseNativeLibs NO-SOURCE
+> Task :react-native-safe-area-context:generateReleaseBuildConfig
+> Task :react-native-google-mobile-ads:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :react-native-google-mobile-ads:copyReleaseJniLibsProjectOnly
+> Task :react-native-safe-area-context:generateReleaseResValues
+> Task :react-native-safe-area-context:generateReleaseResources
+> Task :react-native-google-mobile-ads:generateReleaseBuildConfig
+> Task :react-native-async-storage_async-storage:packageReleaseResources
+> Task :react-native-google-mobile-ads:generateReleaseResValues
+> Task :react-native-async-storage_async-storage:javaPreCompileRelease
+> Task :react-native-async-storage_async-storage:parseReleaseLocalResources
+> Task :react-native-google-mobile-ads:generateReleaseResources
+> Task :react-native-async-storage_async-storage:writeReleaseAarMetadata
+> Task :react-native-async-storage_async-storage:extractDeepLinksRelease
+> Task :react-native-safe-area-context:packageReleaseResources
+> Task :react-native-safe-area-context:javaPreCompileRelease
+> Task :react-native-safe-area-context:parseReleaseLocalResources
+> Task :react-native-safe-area-context:writeReleaseAarMetadata
+> Task :react-native-async-storage_async-storage:generateReleaseRFile
+> Task :react-native-google-mobile-ads:packageReleaseResources
+> Task :react-native-google-mobile-ads:javaPreCompileRelease
+> Task :react-native-safe-area-context:extractDeepLinksRelease
+> Task :react-native-google-mobile-ads:parseReleaseLocalResources
+> Task :react-native-google-mobile-ads:writeReleaseAarMetadata
 
 > Task :react-native-async-storage_async-storage:processReleaseManifest
 package="com.reactnativecommunity.asyncstorage" found in source AndroidManifest.xml: C:\Users\90552\Desktop\Mobile Apps\BallWorld\node_modules\@react-native-async-storage\async-storage\android\src\main\AndroidManifest.xml.
 Setting the namespace via the package attribute in the source AndroidManifest.xml is no longer supported, and the value is ignored.
 Recommendation: remove package="com.reactnativecommunity.asyncstorage" from the source AndroidManifest.xml: C:\Users\90552\Desktop\Mobile Apps\BallWorld\node_modules\@react-native-async-storage\async-storage\android\src\main\AndroidManifest.xml.
 
-> Task :expo-modules-core:configureCMakeRelWithDebInfo[arm64-v8a]
+> Task :react-native-safe-area-context:generateReleaseRFile
+> Task :react-native-google-mobile-ads:extractDeepLinksRelease
+> Task :react-native-google-mobile-ads:generateReleaseRFile
+
+> Task :react-native-safe-area-context:processReleaseManifest
+package="com.th3rdwave.safeareacontext" found in source AndroidManifest.xml: C:\Users\90552\Desktop\Mobile Apps\BallWorld\node_modules\react-native-safe-area-context\android\src\main\AndroidManifest.xml.
+Setting the namespace via the package attribute in the source AndroidManifest.xml is no longer supported, and the value is ignored.
+Recommendation: remove package="com.th3rdwave.safeareacontext" from the source AndroidManifest.xml: C:\Users\90552\Desktop\Mobile Apps\BallWorld\node_modules\react-native-safe-area-context\android\src\main\AndroidManifest.xml.
+
+> Task :react-native-google-mobile-ads:processReleaseManifest
+package="io.invertase.googlemobileads" found in source AndroidManifest.xml: C:\Users\90552\Desktop\Mobile Apps\BallWorld\node_modules\react-native-google-mobile-ads\android\src\main\AndroidManifest.xml.
+Setting the namespace via the package attribute in the source AndroidManifest.xml is no longer supported, and the value is ignored.
+Recommendation: remove package="io.invertase.googlemobileads" from the source AndroidManifest.xml: C:\Users\90552\Desktop\Mobile Apps\BallWorld\node_modules\react-native-google-mobile-ads\android\src\main\AndroidManifest.xml.
+
+> Task :react-native-safe-area-context:compileReleaseLibraryResources
+> Task :react-native-google-mobile-ads:compileReleaseLibraryResources
+> Task :react-native-google-mobile-ads:prepareReleaseArtProfile
+> Task :react-native-google-mobile-ads:mergeReleaseShaders
+> Task :react-native-google-mobile-ads:compileReleaseShaders NO-SOURCE
+> Task :react-native-google-mobile-ads:generateReleaseAssets UP-TO-DATE
+> Task :react-native-google-mobile-ads:mergeReleaseAssets
+> Task :react-native-google-mobile-ads:extractProguardFiles
+> Task :react-native-google-mobile-ads:prepareLintJarForPublish
+> Task :expo-modules-core:buildCMakeRelWithDebInfo[arm64-v8a]
+> Task :react-native-google-mobile-ads:stripReleaseDebugSymbols NO-SOURCE
+> Task :react-native-safe-area-context:prepareReleaseArtProfile
+> Task :react-native-google-mobile-ads:copyReleaseJniLibsProjectAndLocalJars
+> Task :react-native-google-mobile-ads:extractDeepLinksForAarRelease
+> Task :react-native-safe-area-context:mergeReleaseShaders
+> Task :react-native-safe-area-context:compileReleaseShaders NO-SOURCE
+> Task :react-native-safe-area-context:generateReleaseAssets UP-TO-DATE
+> Task :react-native-google-mobile-ads:writeReleaseLintModelMetadata
+> Task :react-native-safe-area-context:mergeReleaseAssets
+> Task :react-native-safe-area-context:extractProguardFiles
+> Task :react-native-safe-area-context:prepareLintJarForPublish
+> Task :react-native-safe-area-context:stripReleaseDebugSymbols NO-SOURCE
+> Task :react-native-google-mobile-ads:mapReleaseSourceSetPaths
+> Task :react-native-safe-area-context:copyReleaseJniLibsProjectAndLocalJars
+> Task :react-native-safe-area-context:extractDeepLinksForAarRelease
+> Task :react-native-safe-area-context:writeReleaseLintModelMetadata
+> Task :expo-modules-core:configureCMakeRelWithDebInfo[armeabi-v7a]
+> Task :react-native-safe-area-context:mapReleaseSourceSetPaths
 > Task :expo:generatePackagesList
 > Task :expo:preBuild
 > Task :expo:preReleaseBuild
@@ -183,13 +252,13 @@ Recommendation: remove package="com.reactnativecommunity.asyncstorage" from the 
 > Task :expo:generateReleaseResValues
 > Task :expo:generateReleaseResources
 > Task :expo:packageReleaseResources
-> Task :expo:javaPreCompileRelease
 > Task :expo:parseReleaseLocalResources
+> Task :expo:javaPreCompileRelease
 > Task :expo:writeReleaseAarMetadata
 > Task :expo:extractDeepLinksRelease
 > Task :expo:generateReleaseRFile
-> Task :expo:compileReleaseLibraryResources
 > Task :expo:prepareReleaseArtProfile
+> Task :expo:compileReleaseLibraryResources
 > Task :expo:processReleaseManifest
 > Task :expo:mergeReleaseShaders
 > Task :expo:compileReleaseShaders NO-SOURCE
@@ -201,24 +270,9 @@ Recommendation: remove package="com.reactnativecommunity.asyncstorage" from the 
 > Task :expo:copyReleaseJniLibsProjectAndLocalJars
 > Task :expo:extractDeepLinksForAarRelease
 > Task :expo:writeReleaseLintModelMetadata
-> Task :expo-constants:verifyReleaseResources
-> Task :react-native-safe-area-context:prepareLintJarForPublish
-> Task :react-native-safe-area-context:stripReleaseDebugSymbols NO-SOURCE
-> Task :react-native-safe-area-context:copyReleaseJniLibsProjectAndLocalJars
-> Task :react-native-safe-area-context:extractDeepLinksForAarRelease
-> Task :react-native-safe-area-context:writeReleaseLintModelMetadata
-> Task :react-native-safe-area-context:mapReleaseSourceSetPaths
 
 > Task :app:createBundleReleaseJsAndAssets
 Starting Metro Bundler
-
-> Task :expo-modules-core:buildCMakeRelWithDebInfo[arm64-v8a]
-> Task :expo-modules-core:configureCMakeRelWithDebInfo[armeabi-v7a]
-
-> Task :app:createBundleReleaseJsAndAssets
-warning: Bundler cache is empty, rebuilding (this may take a minute)
-
-> Task :expo-modules-core:buildCMakeRelWithDebInfo[armeabi-v7a]
 
 > Task :react-native-async-storage_async-storage:compileReleaseJavaWithJavac
 Note: Some input files use or override a deprecated API.
@@ -226,72 +280,245 @@ Note: Recompile with -Xlint:deprecation for details.
 Note: C:\Users\90552\Desktop\Mobile Apps\BallWorld\node_modules\@react-native-async-storage\async-storage\android\src\javaPackage\java\com\reactnativecommunity\asyncstorage\AsyncStoragePackage.java uses unchecked or unsafe operations.
 Note: Recompile with -Xlint:unchecked for details.
 
-> Task :expo-modules-core:configureCMakeRelWithDebInfo[x86]
-> Task :react-native-async-storage_async-storage:bundleLibRuntimeToDirRelease
-> Task :react-native-async-storage_async-storage:bundleLibRuntimeToJarRelease
+> Task :react-native-async-storage_async-storage:compileReleaseLibraryResources
+> Task :react-native-async-storage_async-storage:prepareReleaseArtProfile
 > Task :react-native-async-storage_async-storage:bundleLibCompileToJarRelease
-> Task :react-native-async-storage_async-storage:generateReleaseLintModel
+> Task :react-native-async-storage_async-storage:bundleLibRuntimeToJarRelease
+> Task :react-native-async-storage_async-storage:bundleLibRuntimeToDirRelease
+> Task :expo-modules-core:buildCMakeRelWithDebInfo[armeabi-v7a]
+> Task :react-native-async-storage_async-storage:mergeReleaseShaders
+> Task :react-native-async-storage_async-storage:compileReleaseShaders NO-SOURCE
+> Task :react-native-async-storage_async-storage:generateReleaseAssets UP-TO-DATE
+> Task :react-native-async-storage_async-storage:mergeReleaseAssets
+> Task :react-native-async-storage_async-storage:processReleaseJavaRes NO-SOURCE
 > Task :react-native-async-storage_async-storage:createFullJarRelease
+> Task :expo-modules-core:configureCMakeRelWithDebInfo[x86]
+> Task :react-native-async-storage_async-storage:extractProguardFiles
+> Task :react-native-async-storage_async-storage:generateReleaseLintModel
 > Task :react-native-async-storage_async-storage:prepareLintJarForPublish
 > Task :react-native-async-storage_async-storage:stripReleaseDebugSymbols NO-SOURCE
 > Task :react-native-async-storage_async-storage:copyReleaseJniLibsProjectAndLocalJars
 > Task :react-native-async-storage_async-storage:extractDeepLinksForAarRelease
 
 > Task :app:createBundleReleaseJsAndAssets
-Android node_modules\expo\AppEntry.js ÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæ  0.0% (0/1)
+warning: Bundler cache is empty, rebuilding (this may take a minute)
 
 > Task :react-native-async-storage_async-storage:extractReleaseAnnotations
 > Task :react-native-async-storage_async-storage:mergeReleaseGeneratedProguardFiles
 > Task :react-native-async-storage_async-storage:mergeReleaseConsumerProguardFiles
-> Task :react-native-async-storage_async-storage:writeReleaseLintModelMetadata
-> Task :react-native-async-storage_async-storage:generateReleaseLintVitalModel
-> Task :react-native-async-storage_async-storage:mapReleaseSourceSetPaths
 > Task :react-native-async-storage_async-storage:mergeReleaseJavaResource
-> Task :expo-modules-core:buildCMakeRelWithDebInfo[x86]
-> Task :expo-modules-core:configureCMakeRelWithDebInfo[x86_64]
-> Task :react-native-safe-area-context:mergeReleaseResources
-
-> Task :app:createBundleReleaseJsAndAssets
-Android node_modules\expo\AppEntry.js ÔûôÔûôÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæ 14.5% ( 8/21)
-
-> Task :react-native-async-storage_async-storage:mergeReleaseResources
 > Task :react-native-async-storage_async-storage:syncReleaseLibJars
 > Task :react-native-async-storage_async-storage:bundleReleaseLocalLintAar
+> Task :react-native-async-storage_async-storage:writeReleaseLintModelMetadata
+
+> Task :react-native-safe-area-context:compileReleaseKotlin
+w: file:///C:/Users/90552/Desktop/Mobile%20Apps/BallWorld/node_modules/react-native-safe-area-context/android/src/main/java/com/th3rdwave/safeareacontext/SafeAreaView.kt:59:23 'val uiImplementation: UIImplementation!' is deprecated. Deprecated in Java.
+
+> Task :react-native-async-storage_async-storage:generateReleaseLintVitalModel
 > Task :react-native-async-storage_async-storage:bundleReleaseAar
+> Task :react-native-async-storage_async-storage:mapReleaseSourceSetPaths
+
+> Task :react-native-google-mobile-ads:compileReleaseKotlin
+w: file:///C:/Users/90552/Desktop/Mobile%20Apps/BallWorld/node_modules/react-native-google-mobile-ads/android/src/main/java/io/invertase/googlemobileads/OnNativeEvent.kt:6:68 'constructor<T : Event<T>>(viewTag: Int): Event<T>' is deprecated. Use constructor with explicit surfaceId instead.
+w: file:///C:/Users/90552/Desktop/Mobile%20Apps/BallWorld/node_modules/react-native-google-mobile-ads/android/src/main/java/io/invertase/googlemobileads/ReactNativeGoogleMobileAdsFullScreenAdModule.kt:72:20 'val currentActivity: Activity?' is deprecated. Deprecated in 0.80.0. Use getReactApplicationContext.getCurrentActivity() instead.
+w: file:///C:/Users/90552/Desktop/Mobile%20Apps/BallWorld/node_modules/react-native-google-mobile-ads/android/src/main/java/io/invertase/googlemobileads/ReactNativeGoogleMobileAdsFullScreenAdModule.kt:72:20 This synthetic property is based on the getter function 'fun getCurrentActivity(): Activity?' from Kotlin. In the future, synthetic properties will be available only if the base getter function came from Java. Consider replacing this property access with a 'getCurrentActivity()' function call.
+w: file:///C:/Users/90552/Desktop/Mobile%20Apps/BallWorld/node_modules/react-native-google-mobile-ads/android/src/main/java/io/invertase/googlemobileads/ReactNativeGoogleMobileAdsFullScreenAdModule.kt:108:20 'val currentActivity: Activity?' is deprecated. Deprecated in 0.80.0. Use getReactApplicationContext.getCurrentActivity() instead.
+w: file:///C:/Users/90552/Desktop/Mobile%20Apps/BallWorld/node_modules/react-native-google-mobile-ads/android/src/main/java/io/invertase/googlemobileads/ReactNativeGoogleMobileAdsFullScreenAdModule.kt:108:20 This synthetic property is based on the getter function 'fun getCurrentActivity(): Activity?' from Kotlin. In the future, synthetic properties will be available only if the base getter function came from Java. Consider replacing this property access with a 'getCurrentActivity()' function call.
+w: file:///C:/Users/90552/Desktop/Mobile%20Apps/BallWorld/node_modules/react-native-google-mobile-ads/android/src/main/java/io/invertase/googlemobileads/ReactNativeGoogleMobileAdsPackage.kt:20:8 'class TurboReactPackage : BaseReactPackage' is deprecated. Use BaseReactPackage instead.
+w: file:///C:/Users/90552/Desktop/Mobile%20Apps/BallWorld/node_modules/react-native-google-mobile-ads/android/src/main/java/io/invertase/googlemobileads/ReactNativeGoogleMobileAdsPackage.kt:28:43 'class TurboReactPackage : BaseReactPackage' is deprecated. Use BaseReactPackage instead.
+
+> Task :expo-modules-core:buildCMakeRelWithDebInfo[x86]
+> Task :expo-modules-core:configureCMakeRelWithDebInfo[x86_64]
+
+> Task :app:createBundleReleaseJsAndAssets
+Error "ENOENT" reading contents of "C:\Users\90552\Desktop\Mobile Apps\BallWorld\node_modules\@react-native-async-storage\async-storage\android\build\intermediates\incremental\release\mergeReleaseResources\merged.dir\values", skipping. Add this directory to your ignore list to exclude it.
+Error "ENOENT" reading contents of "C:\Users\90552\Desktop\Mobile Apps\BallWorld\node_modules\@react-native-async-storage\async-storage\android\build\intermediates\incremental\release\mergeReleaseResources\merged.dir\values-af", skipping. Add this directory to your ignore list to exclude it.
+Error "ENOENT" reading contents of "C:\Users\90552\Desktop\Mobile Apps\BallWorld\node_modules\@react-native-async-storage\async-storage\android\build\intermediates\incremental\release\mergeReleaseResources\merged.dir\values-am", skipping. Add this directory to your ignore list to exclude it.
+Error "ENOENT" reading contents of "C:\Users\90552\Desktop\Mobile Apps\BallWorld\node_modules\@react-native-async-storage\async-storage\android\build\intermediates\incremental\release\mergeReleaseResources\merged.dir\values-ar", skipping. Add this directory to your ignore list to exclude it.
+Error "ENOENT" reading contents of "C:\Users\90552\Desktop\Mobile Apps\BallWorld\node_modules\@react-native-async-storage\async-storage\android\build\intermediates\incremental\release\mergeReleaseResources\merged.dir\values-as", skipping. Add this directory to your ignore list to exclude it.
+Error "ENOENT" reading contents of "C:\Users\90552\Desktop\Mobile Apps\BallWorld\node_modules\@react-native-async-storage\async-storage\android\build\intermediates\incremental\release\mergeReleaseResources\merged.dir\values-az", skipping. Add this directory to your ignore list to exclude it.
+Error "ENOENT" reading contents of "C:\Users\90552\Desktop\Mobile Apps\BallWorld\node_modules\@react-native-async-storage\async-storage\android\build\intermediates\incremental\release\mergeReleaseResources\merged.dir\values-b+sr+Latn", skipping. Add this directory to your ignore list to exclude it.
+Error "ENOENT" reading contents of "C:\Users\90552\Desktop\Mobile Apps\BallWorld\node_modules\@react-native-async-storage\async-storage\android\build\intermediates\incremental\release\mergeReleaseResources\merged.dir\values-be", skipping. Add this directory to your ignore list to exclude it.
+Error "ENOENT" reading contents of "C:\Users\90552\Desktop\Mobile Apps\BallWorld\node_modules\@react-native-async-storage\async-storage\android\build\intermediates\incremental\release\mergeReleaseResources\merged.dir\values-bn", skipping. Add this directory to your ignore list to exclude it.
+Error "ENOENT" reading contents of "C:\Users\90552\Desktop\Mobile Apps\BallWorld\node_modules\@react-native-async-storage\async-storage\android\build\intermediates\incremental\release\mergeReleaseResources\merged.dir\values-bs", skipping. Add this directory to your ignore list to exclude it.
+Error "ENOENT" reading contents of "C:\Users\90552\Desktop\Mobile Apps\BallWorld\node_modules\@react-native-async-storage\async-storage\android\build\intermediates\incremental\release\mergeReleaseResources\merged.dir\values-ca", skipping. Add this directory to your ignore list to exclude it.
+Error "ENOENT" reading contents of "C:\Users\90552\Desktop\Mobile Apps\BallWorld\node_modules\@react-native-async-storage\async-storage\android\build\intermediates\incremental\release\mergeReleaseResources\merged.dir\values-bg", skipping. Add this directory to your ignore list to exclude it.
+Error "ENOENT" reading contents of "C:\Users\90552\Desktop\Mobile Apps\BallWorld\node_modules\@react-native-async-storage\async-storage\android\build\intermediates\incremental\release\mergeReleaseResources\merged.dir\values-cs", skipping. Add this directory to your ignore list to exclude it.
+Error "ENOENT" reading contents of "C:\Users\90552\Desktop\Mobile Apps\BallWorld\node_modules\@react-native-async-storage\async-storage\android\build\intermediates\incremental\release\mergeReleaseResources\merged.dir\values-da", skipping. Add this directory to your ignore list to exclude it.
+Error "ENOENT" reading contents of "C:\Users\90552\Desktop\Mobile Apps\BallWorld\node_modules\@react-native-async-storage\async-storage\android\build\intermediates\incremental\release\mergeReleaseResources\merged.dir\values-de", skipping. Add this directory to your ignore list to exclude it.
+Error "ENOENT" reading contents of "C:\Users\90552\Desktop\Mobile Apps\BallWorld\node_modules\@react-native-async-storage\async-storage\android\build\intermediates\incremental\release\mergeReleaseResources\merged.dir\values-en-rAU", skipping. Add this directory to your ignore list to exclude it.
+Error "ENOENT" reading contents of "C:\Users\90552\Desktop\Mobile Apps\BallWorld\node_modules\@react-native-async-storage\async-storage\android\build\intermediates\incremental\release\mergeReleaseResources\merged.dir\values-el", skipping. Add this directory to your ignore list to exclude it.
+Error "ENOENT" reading contents of "C:\Users\90552\Desktop\Mobile Apps\BallWorld\node_modules\@react-native-async-storage\async-storage\android\build\intermediates\incremental\release\mergeReleaseResources\merged.dir\values-en-rGB", skipping. Add this directory to your ignore list to exclude it.
+Error "ENOENT" reading contents of "C:\Users\90552\Desktop\Mobile Apps\BallWorld\node_modules\@react-native-async-storage\async-storage\android\build\intermediates\incremental\release\mergeReleaseResources\merged.dir\values-en-rXC", skipping. Add this directory to your ignore list to exclude it.
+Error "ENOENT" reading contents of "C:\Users\90552\Desktop\Mobile Apps\BallWorld\node_modules\@react-native-async-storage\async-storage\android\build\intermediates\incremental\release\mergeReleaseResources\merged.dir\values-es", skipping. Add this directory to your ignore list to exclude it.
+Error "ENOENT" reading contents of "C:\Users\90552\Desktop\Mobile Apps\BallWorld\node_modules\@react-native-async-storage\async-storage\android\build\intermediates\incremental\release\mergeReleaseResources\merged.dir\values-en-rCA", skipping. Add this directory to your ignore list to exclude it.
+Error "ENOENT" reading contents of "C:\Users\90552\Desktop\Mobile Apps\BallWorld\node_modules\@react-native-async-storage\async-storage\android\build\intermediates\incremental\release\mergeReleaseResources\merged.dir\values-en-rIN", skipping. Add this directory to your ignore list to exclude it.
+Error "ENOENT" reading contents of "C:\Users\90552\Desktop\Mobile Apps\BallWorld\node_modules\@react-native-async-storage\async-storage\android\build\intermediates\incremental\release\mergeReleaseResources\merged.dir\values-es-rES", skipping. Add this directory to your ignore list to exclude it.
+Error "ENOENT" reading contents of "C:\Users\90552\Desktop\Mobile Apps\BallWorld\node_modules\@react-native-async-storage\async-storage\android\build\intermediates\incremental\release\mergeReleaseResources\merged.dir\values-es-rUS", skipping. Add this directory to your ignore list to exclude it.
+Error "ENOENT" reading contents of "C:\Users\90552\Desktop\Mobile Apps\BallWorld\node_modules\@react-native-async-storage\async-storage\android\build\intermediates\incremental\release\mergeReleaseResources\merged.dir\values-et", skipping. Add this directory to your ignore list to exclude it.
+Error "ENOENT" reading contents of "C:\Users\90552\Desktop\Mobile Apps\BallWorld\node_modules\@react-native-async-storage\async-storage\android\build\intermediates\incremental\release\mergeReleaseResources\merged.dir\values-fa", skipping. Add this directory to your ignore list to exclude it.
+Error "ENOENT" reading contents of "C:\Users\90552\Desktop\Mobile Apps\BallWorld\node_modules\@react-native-async-storage\async-storage\android\build\intermediates\incremental\release\mergeReleaseResources\merged.dir\values-eu", skipping. Add this directory to your ignore list to exclude it.
+Error "ENOENT" reading contents of "C:\Users\90552\Desktop\Mobile Apps\BallWorld\node_modules\@react-native-async-storage\async-storage\android\build\intermediates\incremental\release\mergeReleaseResources\merged.dir\values-fi", skipping. Add this directory to your ignore list to exclude it.
+Error "ENOENT" reading contents of "C:\Users\90552\Desktop\Mobile Apps\BallWorld\node_modules\@react-native-async-storage\async-storage\android\build\intermediates\incremental\release\mergeReleaseResources\merged.dir\values-fr", skipping. Add this directory to your ignore list to exclude it.
+Error "ENOENT" reading contents of "C:\Users\90552\Desktop\Mobile Apps\BallWorld\node_modules\@react-native-async-storage\async-storage\android\build\intermediates\incremental\release\mergeReleaseResources\merged.dir\values-fr-rCA", skipping. Add this directory to your ignore list to exclude it.
+Error "ENOENT" reading contents of "C:\Users\90552\Desktop\Mobile Apps\BallWorld\node_modules\@react-native-async-storage\async-storage\android\build\intermediates\incremental\release\mergeReleaseResources\merged.dir\values-gl", skipping. Add this directory to your ignore list to exclude it.
+Error "ENOENT" reading contents of "C:\Users\90552\Desktop\Mobile Apps\BallWorld\node_modules\@react-native-async-storage\async-storage\android\build\intermediates\incremental\release\mergeReleaseResources\merged.dir\values-gu", skipping. Add this directory to your ignore list to exclude it.
+Error "ENOENT" reading contents of "C:\Users\90552\Desktop\Mobile Apps\BallWorld\node_modules\@react-native-async-storage\async-storage\android\build\intermediates\incremental\release\mergeReleaseResources\merged.dir\values-h720dp-v13", skipping. Add this directory to your ignore list to exclude it.
+Error "ENOENT" reading contents of "C:\Users\90552\Desktop\Mobile Apps\BallWorld\node_modules\@react-native-async-storage\async-storage\android\build\intermediates\incremental\release\mergeReleaseResources\merged.dir\values-hi", skipping. Add this directory to your ignore list to exclude it.
+Error "ENOENT" reading contents of "C:\Users\90552\Desktop\Mobile Apps\BallWorld\node_modules\@react-native-async-storage\async-storage\android\build\intermediates\incremental\release\mergeReleaseResources\merged.dir\values-hdpi-v4", skipping. Add this directory to your ignore list to exclude it.
+Error "ENOENT" reading contents of "C:\Users\90552\Desktop\Mobile Apps\BallWorld\node_modules\@react-native-async-storage\async-storage\android\build\intermediates\incremental\release\mergeReleaseResources\merged.dir\values-hr", skipping. Add this directory to your ignore list to exclude it.
+Error "ENOENT" reading contents of "C:\Users\90552\Desktop\Mobile Apps\BallWorld\node_modules\@react-native-async-storage\async-storage\android\build\intermediates\incremental\release\mergeReleaseResources\merged.dir\values-hu", skipping. Add this directory to your ignore list to exclude it.
+Error "ENOENT" reading contents of "C:\Users\90552\Desktop\Mobile Apps\BallWorld\node_modules\@react-native-async-storage\async-storage\android\build\intermediates\incremental\release\mergeReleaseResources\merged.dir\values-is", skipping. Add this directory to your ignore list to exclude it.
+Error "ENOENT" reading contents of "C:\Users\90552\Desktop\Mobile Apps\BallWorld\node_modules\@react-native-async-storage\async-storage\android\build\intermediates\incremental\release\mergeReleaseResources\merged.dir\values-in", skipping. Add this directory to your ignore list to exclude it.
+Error "ENOENT" reading contents of "C:\Users\90552\Desktop\Mobile Apps\BallWorld\node_modules\@react-native-async-storage\async-storage\android\build\intermediates\incremental\release\mergeReleaseResources\merged.dir\values-hy", skipping. Add this directory to your ignore list to exclude it.
+Error "ENOENT" reading contents of "C:\Users\90552\Desktop\Mobile Apps\BallWorld\node_modules\@react-native-async-storage\async-storage\android\build\intermediates\incremental\release\mergeReleaseResources\merged.dir\values-it", skipping. Add this directory to your ignore list to exclude it.
+Error "ENOENT" reading contents of "C:\Users\90552\Desktop\Mobile Apps\BallWorld\node_modules\@react-native-async-storage\async-storage\android\build\intermediates\incremental\release\mergeReleaseResources\merged.dir\values-iw", skipping. Add this directory to your ignore list to exclude it.
+Error "ENOENT" reading contents of "C:\Users\90552\Desktop\Mobile Apps\BallWorld\node_modules\@react-native-async-storage\async-storage\android\build\intermediates\incremental\release\mergeReleaseResources\merged.dir\values-ja", skipping. Add this directory to your ignore list to exclude it.
+Error "ENOENT" reading contents of "C:\Users\90552\Desktop\Mobile Apps\BallWorld\node_modules\@react-native-async-storage\async-storage\android\build\intermediates\incremental\release\mergeReleaseResources\merged.dir\values-ka", skipping. Add this directory to your ignore list to exclude it.
+Error "ENOENT" reading contents of "C:\Users\90552\Desktop\Mobile Apps\BallWorld\node_modules\@react-native-async-storage\async-storage\android\build\intermediates\incremental\release\mergeReleaseResources\merged.dir\values-km", skipping. Add this directory to your ignore list to exclude it.
+Error "ENOENT" reading contents of "C:\Users\90552\Desktop\Mobile Apps\BallWorld\node_modules\@react-native-async-storage\async-storage\android\build\intermediates\incremental\release\mergeReleaseResources\merged.dir\values-kk", skipping. Add this directory to your ignore list to exclude it.
+Error "ENOENT" reading contents of "C:\Users\90552\Desktop\Mobile Apps\BallWorld\node_modules\@react-native-async-storage\async-storage\android\build\intermediates\incremental\release\mergeReleaseResources\merged.dir\values-kn", skipping. Add this directory to your ignore list to exclude it.
+Error "ENOENT" reading contents of "C:\Users\90552\Desktop\Mobile Apps\BallWorld\node_modules\@react-native-async-storage\async-storage\android\build\intermediates\incremental\release\mergeReleaseResources\merged.dir\values-ko", skipping. Add this directory to your ignore list to exclude it.
+Error "ENOENT" reading contents of "C:\Users\90552\Desktop\Mobile Apps\BallWorld\node_modules\@react-native-async-storage\async-storage\android\build\intermediates\incremental\release\mergeReleaseResources\merged.dir\values-ky", skipping. Add this directory to your ignore list to exclude it.
+Error "ENOENT" reading contents of "C:\Users\90552\Desktop\Mobile Apps\BallWorld\node_modules\@react-native-async-storage\async-storage\android\build\intermediates\incremental\release\mergeReleaseResources\merged.dir\values-land", skipping. Add this directory to your ignore list to exclude it.
+Error "ENOENT" reading contents of "C:\Users\90552\Desktop\Mobile Apps\BallWorld\node_modules\@react-native-async-storage\async-storage\android\build\intermediates\incremental\release\mergeReleaseResources\merged.dir\values-large-v4", skipping. Add this directory to your ignore list to exclude it.
+Error "ENOENT" reading contents of "C:\Users\90552\Desktop\Mobile Apps\BallWorld\node_modules\@react-native-async-storage\async-storage\android\build\intermediates\incremental\release\mergeReleaseResources\merged.dir\values-ldltr-v21", skipping. Add this directory to your ignore list to exclude it.
+Error "ENOENT" reading contents of "C:\Users\90552\Desktop\Mobile Apps\BallWorld\node_modules\@react-native-async-storage\async-storage\android\build\intermediates\incremental\release\mergeReleaseResources\merged.dir\values-lo", skipping. Add this directory to your ignore list to exclude it.
+Error "ENOENT" reading contents of "C:\Users\90552\Desktop\Mobile Apps\BallWorld\node_modules\@react-native-async-storage\async-storage\android\build\intermediates\incremental\release\mergeReleaseResources\merged.dir\values-lt", skipping. Add this directory to your ignore list to exclude it.
+Error "ENOENT" reading contents of "C:\Users\90552\Desktop\Mobile Apps\BallWorld\node_modules\@react-native-async-storage\async-storage\android\build\intermediates\incremental\release\mergeReleaseResources\merged.dir\values-mk", skipping. Add this directory to your ignore list to exclude it.
+Error "ENOENT" reading contents of "C:\Users\90552\Desktop\Mobile Apps\BallWorld\node_modules\@react-native-async-storage\async-storage\android\build\intermediates\incremental\release\mergeReleaseResources\merged.dir\values-lv", skipping. Add this directory to your ignore list to exclude it.
+Error "ENOENT" reading contents of "C:\Users\90552\Desktop\Mobile Apps\BallWorld\node_modules\@react-native-async-storage\async-storage\android\build\intermediates\incremental\release\mergeReleaseResources\merged.dir\values-mn", skipping. Add this directory to your ignore list to exclude it.
+Error "ENOENT" reading contents of "C:\Users\90552\Desktop\Mobile Apps\BallWorld\node_modules\@react-native-async-storage\async-storage\android\build\intermediates\incremental\release\mergeReleaseResources\merged.dir\values-ml", skipping. Add this directory to your ignore list to exclude it.
+Error "ENOENT" reading contents of "C:\Users\90552\Desktop\Mobile Apps\BallWorld\node_modules\@react-native-async-storage\async-storage\android\build\intermediates\incremental\release\mergeReleaseResources\merged.dir\values-mr", skipping. Add this directory to your ignore list to exclude it.
+Error "ENOENT" reading contents of "C:\Users\90552\Desktop\Mobile Apps\BallWorld\node_modules\@react-native-async-storage\async-storage\android\build\intermediates\incremental\release\mergeReleaseResources\merged.dir\values-ms", skipping. Add this directory to your ignore list to exclude it.
+Error "ENOENT" reading contents of "C:\Users\90552\Desktop\Mobile Apps\BallWorld\node_modules\@react-native-async-storage\async-storage\android\build\intermediates\incremental\release\mergeReleaseResources\merged.dir\values-my", skipping. Add this directory to your ignore list to exclude it.
+Error "ENOENT" reading contents of "C:\Users\90552\Desktop\Mobile Apps\BallWorld\node_modules\@react-native-async-storage\async-storage\android\build\intermediates\incremental\release\mergeReleaseResources\merged.dir\values-ne", skipping. Add this directory to your ignore list to exclude it.
+Error "ENOENT" reading contents of "C:\Users\90552\Desktop\Mobile Apps\BallWorld\node_modules\@react-native-async-storage\async-storage\android\build\intermediates\incremental\release\mergeReleaseResources\merged.dir\values-nb", skipping. Add this directory to your ignore list to exclude it.
+Error "ENOENT" reading contents of "C:\Users\90552\Desktop\Mobile Apps\BallWorld\node_modules\@react-native-async-storage\async-storage\android\build\intermediates\incremental\release\mergeReleaseResources\merged.dir\values-nl", skipping. Add this directory to your ignore list to exclude it.
+Error "ENOENT" reading contents of "C:\Users\90552\Desktop\Mobile Apps\BallWorld\node_modules\@react-native-async-storage\async-storage\android\build\intermediates\incremental\release\mergeReleaseResources\merged.dir\values-night-v8", skipping. Add this directory to your ignore list to exclude it.
+Error "ENOENT" reading contents of "C:\Users\90552\Desktop\Mobile Apps\BallWorld\node_modules\@react-native-async-storage\async-storage\android\build\intermediates\incremental\release\mergeReleaseResources\merged.dir\values-or", skipping. Add this directory to your ignore list to exclude it.
+Error "ENOENT" reading contents of "C:\Users\90552\Desktop\Mobile Apps\BallWorld\node_modules\@react-native-async-storage\async-storage\android\build\intermediates\incremental\release\mergeReleaseResources\merged.dir\values-pa", skipping. Add this directory to your ignore list to exclude it.
+Error "ENOENT" reading contents of "C:\Users\90552\Desktop\Mobile Apps\BallWorld\node_modules\@react-native-async-storage\async-storage\android\build\intermediates\incremental\release\mergeReleaseResources\merged.dir\values-port", skipping. Add this directory to your ignore list to exclude it.
+Error "ENOENT" reading contents of "C:\Users\90552\Desktop\Mobile Apps\BallWorld\node_modules\@react-native-async-storage\async-storage\android\build\intermediates\incremental\release\mergeReleaseResources\merged.dir\values-pl", skipping. Add this directory to your ignore list to exclude it.
+Error "ENOENT" reading contents of "C:\Users\90552\Desktop\Mobile Apps\BallWorld\node_modules\@react-native-async-storage\async-storage\android\build\intermediates\incremental\release\mergeReleaseResources\merged.dir\values-pt", skipping. Add this directory to your ignore list to exclude it.
+Error "ENOENT" reading contents of "C:\Users\90552\Desktop\Mobile Apps\BallWorld\node_modules\@react-native-async-storage\async-storage\android\build\intermediates\incremental\release\mergeReleaseResources\merged.dir\values-pt-rBR", skipping. Add this directory to your ignore list to exclude it.
+Error "ENOENT" reading contents of "C:\Users\90552\Desktop\Mobile Apps\BallWorld\node_modules\@react-native-async-storage\async-storage\android\build\intermediates\incremental\release\mergeReleaseResources\merged.dir\values-pt-rPT", skipping. Add this directory to your ignore list to exclude it.
+Error "ENOENT" reading contents of "C:\Users\90552\Desktop\Mobile Apps\BallWorld\node_modules\@react-native-async-storage\async-storage\android\build\intermediates\incremental\release\mergeReleaseResources\merged.dir\values-ro", skipping. Add this directory to your ignore list to exclude it.
+Error "ENOENT" reading contents of "C:\Users\90552\Desktop\Mobile Apps\BallWorld\node_modules\@react-native-async-storage\async-storage\android\build\intermediates\incremental\release\mergeReleaseResources\merged.dir\values-si", skipping. Add this directory to your ignore list to exclude it.
+Error "ENOENT" reading contents of "C:\Users\90552\Desktop\Mobile Apps\BallWorld\node_modules\@react-native-async-storage\async-storage\android\build\intermediates\incremental\release\mergeReleaseResources\merged.dir\values-sk", skipping. Add this directory to your ignore list to exclude it.
+Error "ENOENT" reading contents of "C:\Users\90552\Desktop\Mobile Apps\BallWorld\node_modules\@react-native-async-storage\async-storage\android\build\intermediates\incremental\release\mergeReleaseResources\merged.dir\values-sl", skipping. Add this directory to your ignore list to exclude it.
+Error "ENOENT" reading contents of "C:\Users\90552\Desktop\Mobile Apps\BallWorld\node_modules\@react-native-async-storage\async-storage\android\build\intermediates\incremental\release\mergeReleaseResources\merged.dir\values-sq", skipping. Add this directory to your ignore list to exclude it.
+Error "ENOENT" reading contents of "C:\Users\90552\Desktop\Mobile Apps\BallWorld\node_modules\@react-native-async-storage\async-storage\android\build\intermediates\incremental\release\mergeReleaseResources\merged.dir\values-sv", skipping. Add this directory to your ignore list to exclude it.
+Error "ENOENT" reading contents of "C:\Users\90552\Desktop\Mobile Apps\BallWorld\node_modules\@react-native-async-storage\async-storage\android\build\intermediates\incremental\release\mergeReleaseResources\merged.dir\values-ru", skipping. Add this directory to your ignore list to exclude it.
+Error "ENOENT" reading contents of "C:\Users\90552\Desktop\Mobile Apps\BallWorld\node_modules\@react-native-async-storage\async-storage\android\build\intermediates\incremental\release\mergeReleaseResources\merged.dir\values-sr", skipping. Add this directory to your ignore list to exclude it.
+Error "ENOENT" reading contents of "C:\Users\90552\Desktop\Mobile Apps\BallWorld\node_modules\@react-native-async-storage\async-storage\android\build\intermediates\incremental\release\mergeReleaseResources\merged.dir\values-sw", skipping. Add this directory to your ignore list to exclude it.
+Error "ENOENT" reading contents of "C:\Users\90552\Desktop\Mobile Apps\BallWorld\node_modules\@react-native-async-storage\async-storage\android\build\intermediates\incremental\release\mergeReleaseResources\merged.dir\values-ta", skipping. Add this directory to your ignore list to exclude it.
+Error "ENOENT" reading contents of "C:\Users\90552\Desktop\Mobile Apps\BallWorld\node_modules\@react-native-async-storage\async-storage\android\build\intermediates\incremental\release\mergeReleaseResources\merged.dir\values-sw600dp-v13", skipping. Add this directory to your ignore list to exclude it.
+Error "ENOENT" reading contents of "C:\Users\90552\Desktop\Mobile Apps\BallWorld\node_modules\@react-native-async-storage\async-storage\android\build\intermediates\incremental\release\mergeReleaseResources\merged.dir\values-te", skipping. Add this directory to your ignore list to exclude it.
+Error "ENOENT" reading contents of "C:\Users\90552\Desktop\Mobile Apps\BallWorld\node_modules\@react-native-async-storage\async-storage\android\build\intermediates\incremental\release\mergeReleaseResources\merged.dir\values-tl", skipping. Add this directory to your ignore list to exclude it.
+Error "ENOENT" reading contents of "C:\Users\90552\Desktop\Mobile Apps\BallWorld\node_modules\@react-native-async-storage\async-storage\android\build\intermediates\incremental\release\mergeReleaseResources\merged.dir\values-th", skipping. Add this directory to your ignore list to exclude it.
+Error "ENOENT" reading contents of "C:\Users\90552\Desktop\Mobile Apps\BallWorld\node_modules\@react-native-async-storage\async-storage\android\build\intermediates\incremental\release\mergeReleaseResources\merged.dir\values-uk", skipping. Add this directory to your ignore list to exclude it.
+Error "ENOENT" reading contents of "C:\Users\90552\Desktop\Mobile Apps\BallWorld\node_modules\@react-native-async-storage\async-storage\android\build\intermediates\incremental\release\mergeReleaseResources\merged.dir\values-ur", skipping. Add this directory to your ignore list to exclude it.
+Error "ENOENT" reading contents of "C:\Users\90552\Desktop\Mobile Apps\BallWorld\node_modules\@react-native-async-storage\async-storage\android\build\intermediates\incremental\release\mergeReleaseResources\merged.dir\values-tr", skipping. Add this directory to your ignore list to exclude it.
+Error "ENOENT" reading contents of "C:\Users\90552\Desktop\Mobile Apps\BallWorld\node_modules\@react-native-async-storage\async-storage\android\build\intermediates\incremental\release\mergeReleaseResources\merged.dir\values-uz", skipping. Add this directory to your ignore list to exclude it.
+Error "ENOENT" reading contents of "C:\Users\90552\Desktop\Mobile Apps\BallWorld\node_modules\@react-native-async-storage\async-storage\android\build\intermediates\incremental\release\mergeReleaseResources\merged.dir\values-v17", skipping. Add this directory to your ignore list to exclude it.
+Error "ENOENT" reading contents of "C:\Users\90552\Desktop\Mobile Apps\BallWorld\node_modules\@react-native-async-storage\async-storage\android\build\intermediates\incremental\release\mergeReleaseResources\merged.dir\values-v18", skipping. Add this directory to your ignore list to exclude it.
+Error "ENOENT" reading contents of "C:\Users\90552\Desktop\Mobile Apps\BallWorld\node_modules\@react-native-async-storage\async-storage\android\build\intermediates\incremental\release\mergeReleaseResources\merged.dir\values-v21", skipping. Add this directory to your ignore list to exclude it.
+Error "ENOENT" reading contents of "C:\Users\90552\Desktop\Mobile Apps\BallWorld\node_modules\@react-native-async-storage\async-storage\android\build\intermediates\incremental\release\mergeReleaseResources\merged.dir\values-v16", skipping. Add this directory to your ignore list to exclude it.
+Error "ENOENT" reading contents of "C:\Users\90552\Desktop\Mobile Apps\BallWorld\node_modules\@react-native-async-storage\async-storage\android\build\intermediates\incremental\release\mergeReleaseResources\merged.dir\values-v22", skipping. Add this directory to your ignore list to exclude it.
+Error "ENOENT" reading contents of "C:\Users\90552\Desktop\Mobile Apps\BallWorld\node_modules\@react-native-async-storage\async-storage\android\build\intermediates\incremental\release\mergeReleaseResources\merged.dir\values-v23", skipping. Add this directory to your ignore list to exclude it.
+Error "ENOENT" reading contents of "C:\Users\90552\Desktop\Mobile Apps\BallWorld\node_modules\@react-native-async-storage\async-storage\android\build\intermediates\incremental\release\mergeReleaseResources\merged.dir\values-v24", skipping. Add this directory to your ignore list to exclude it.
+Error "ENOENT" reading contents of "C:\Users\90552\Desktop\Mobile Apps\BallWorld\node_modules\@react-native-async-storage\async-storage\android\build\intermediates\incremental\release\mergeReleaseResources\merged.dir\values-v25", skipping. Add this directory to your ignore list to exclude it.
+Error "ENOENT" reading contents of "C:\Users\90552\Desktop\Mobile Apps\BallWorld\node_modules\@react-native-async-storage\async-storage\android\build\intermediates\incremental\release\mergeReleaseResources\merged.dir\values-v28", skipping. Add this directory to your ignore list to exclude it.
+Error "ENOENT" reading contents of "C:\Users\90552\Desktop\Mobile Apps\BallWorld\node_modules\@react-native-async-storage\async-storage\android\build\intermediates\incremental\release\mergeReleaseResources\merged.dir\values-v26", skipping. Add this directory to your ignore list to exclude it.
+Error "ENOENT" reading contents of "C:\Users\90552\Desktop\Mobile Apps\BallWorld\node_modules\@react-native-async-storage\async-storage\android\build\intermediates\incremental\release\mergeReleaseResources\merged.dir\values-vi", skipping. Add this directory to your ignore list to exclude it.
+Error "ENOENT" reading contents of "C:\Users\90552\Desktop\Mobile Apps\BallWorld\node_modules\@react-native-async-storage\async-storage\android\build\intermediates\incremental\release\mergeReleaseResources\merged.dir\values-watch-v20", skipping. Add this directory to your ignore list to exclude it.
+Error "ENOENT" reading contents of "C:\Users\90552\Desktop\Mobile Apps\BallWorld\node_modules\@react-native-async-storage\async-storage\android\build\intermediates\incremental\release\mergeReleaseResources\merged.dir\values-watch-v21", skipping. Add this directory to your ignore list to exclude it.
+Error "ENOENT" reading contents of "C:\Users\90552\Desktop\Mobile Apps\BallWorld\node_modules\@react-native-async-storage\async-storage\android\build\intermediates\incremental\release\mergeReleaseResources\merged.dir\values-xlarge-v4", skipping. Add this directory to your ignore list to exclude it.
+Error "ENOENT" reading contents of "C:\Users\90552\Desktop\Mobile Apps\BallWorld\node_modules\@react-native-async-storage\async-storage\android\build\intermediates\incremental\release\mergeReleaseResources\merged.dir\values-zh-rCN", skipping. Add this directory to your ignore list to exclude it.
+Error "ENOENT" reading contents of "C:\Users\90552\Desktop\Mobile Apps\BallWorld\node_modules\@react-native-async-storage\async-storage\android\build\intermediates\incremental\release\mergeReleaseResources\merged.dir\values-zh-rHK", skipping. Add this directory to your ignore list to exclude it.
+Error "ENOENT" reading contents of "C:\Users\90552\Desktop\Mobile Apps\BallWorld\node_modules\@react-native-async-storage\async-storage\android\build\intermediates\incremental\release\mergeReleaseResources\merged.dir\values-zh-rTW", skipping. Add this directory to your ignore list to exclude it.
+Error "ENOENT" reading contents of "C:\Users\90552\Desktop\Mobile Apps\BallWorld\node_modules\@react-native-async-storage\async-storage\android\build\intermediates\incremental\release\mergeReleaseResources\merged.dir\values-zu", skipping. Add this directory to your ignore list to exclude it.
+Android node_modules\expo\AppEntry.js ÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæ  0.0% (0/1)
+
+> Task :react-native-safe-area-context:mergeReleaseResources
 > Task :expo-modules-core:buildCMakeRelWithDebInfo[x86_64]
 > Task :expo-modules-core:mergeReleaseJniLibFolders
+> Task :react-native-google-mobile-ads:mergeReleaseResources
 > Task :expo-modules-core:checkKotlinGradlePluginConfigurationErrors SKIPPED
 > Task :expo-modules-core:generateReleaseBuildConfig
 > Task :expo-modules-core:generateReleaseResValues
 > Task :expo-modules-core:generateReleaseResources
 > Task :expo-modules-core:packageReleaseResources
-> Task :expo-modules-core:writeReleaseAarMetadata
 > Task :expo-modules-core:javaPreCompileRelease
 > Task :expo-modules-core:parseReleaseLocalResources
+> Task :expo-modules-core:writeReleaseAarMetadata
+> Task :expo:mapReleaseSourceSetPaths
 > Task :expo-modules-core:extractDeepLinksRelease
 > Task :expo-modules-core:generateReleaseRFile
-> Task :expo-modules-core:compileReleaseLibraryResources
 
 > Task :expo-modules-core:processReleaseManifest
 C:\Users\90552\Desktop\Mobile Apps\BallWorld\node_modules\expo-modules-core\android\src\main\AndroidManifest.xml:8:9-11:45 Warning:
 	meta-data#com.facebook.soloader.enabled@android:value was tagged at AndroidManifest.xml:8 to replace other declarations but no other declaration present
 
-> Task :app:createBundleReleaseJsAndAssets
-Android node_modules\expo\AppEntry.js ÔûôÔûôÔûôÔûôÔûôÔûôÔûôÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæ 46.0% (38/56)
-
+> Task :react-native-safe-area-context:compileReleaseJavaWithJavac
+> Task :react-native-safe-area-context:processReleaseJavaRes
+> Task :react-native-safe-area-context:bundleLibCompileToJarRelease
+> Task :react-native-safe-area-context:bundleLibRuntimeToJarRelease
+> Task :react-native-safe-area-context:generateReleaseLintModel
 > Task :expo-modules-core:mergeReleaseNativeLibs
-> Task :expo:mapReleaseSourceSetPaths
+> Task :react-native-safe-area-context:bundleLibRuntimeToDirRelease
+> Task :react-native-safe-area-context:createFullJarRelease
+> Task :react-native-safe-area-context:extractReleaseAnnotations
+> Task :react-native-safe-area-context:mergeReleaseGeneratedProguardFiles
+> Task :react-native-safe-area-context:mergeReleaseConsumerProguardFiles
+> Task :react-native-safe-area-context:mergeReleaseJavaResource
+> Task :react-native-safe-area-context:syncReleaseLibJars
+> Task :react-native-safe-area-context:bundleReleaseLocalLintAar
+> Task :react-native-safe-area-context:generateReleaseLintVitalModel
+> Task :react-native-safe-area-context:bundleReleaseAar
+
+> Task :react-native-google-mobile-ads:compileReleaseJavaWithJavac
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: C:\Users\90552\Desktop\Mobile Apps\BallWorld\node_modules\react-native-google-mobile-ads\android\src\main\java\io\invertase\googlemobileads\ReactNativeGoogleMobileAdsCommon.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+
+> Task :react-native-async-storage_async-storage:lintVitalAnalyzeRelease
+> Task :react-native-google-mobile-ads:processReleaseJavaRes
+> Task :react-native-google-mobile-ads:bundleLibCompileToJarRelease
+
+> Task :app:createBundleReleaseJsAndAssets
+Android node_modules\expo\AppEntry.js ÔûôÔûôÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæ 12.8% ( 8/23)
+
+> Task :react-native-google-mobile-ads:generateReleaseLintModel
+> Task :react-native-google-mobile-ads:bundleLibRuntimeToDirRelease
+> Task :react-native-google-mobile-ads:extractReleaseAnnotations
+> Task :react-native-google-mobile-ads:mergeReleaseGeneratedProguardFiles
+> Task :react-native-google-mobile-ads:mergeReleaseConsumerProguardFiles
+> Task :react-native-google-mobile-ads:mergeReleaseJavaResource
+> Task :react-native-google-mobile-ads:syncReleaseLibJars
+> Task :react-native-google-mobile-ads:bundleReleaseLocalLintAar
+> Task :react-native-google-mobile-ads:generateReleaseLintVitalModel
+> Task :react-native-google-mobile-ads:bundleReleaseAar
+> Task :react-native-safe-area-context:lintVitalAnalyzeRelease
+> Task :react-native-async-storage_async-storage:mergeReleaseResources
+> Task :react-native-google-mobile-ads:bundleLibRuntimeToJarRelease
+> Task :react-native-google-mobile-ads:createFullJarRelease
+
+> Task :app:createBundleReleaseJsAndAssets
+Android node_modules\expo\AppEntry.js ÔûôÔûôÔûôÔûôÔûôÔûôÔûôÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæÔûæ 46.0% (39/59)
+
+> Task :expo-modules-core:compileReleaseLibraryResources
 > Task :expo-modules-core:prepareReleaseArtProfile
+> Task :expo:mergeReleaseResources
+> Task :react-native-google-mobile-ads:lintVitalAnalyzeRelease
 > Task :expo-modules-core:mergeReleaseShaders
 > Task :expo-modules-core:compileReleaseShaders NO-SOURCE
 > Task :expo-modules-core:generateReleaseAssets UP-TO-DATE
 > Task :expo-modules-core:mergeReleaseAssets
 > Task :expo-modules-core:extractProguardFiles
 > Task :expo-modules-core:prepareLintJarForPublish
-
-> Task :app:createBundleReleaseJsAndAssets
-Android node_modules\expo\AppEntry.js ÔûôÔûôÔûôÔûôÔûôÔûôÔûôÔûôÔûôÔûôÔûôÔûôÔûæÔûæÔûæÔûæ 77.2% (65/74)
-
 > Task :expo-modules-core:extractDeepLinksForAarRelease
 > Task :expo-modules-core:writeReleaseLintModelMetadata
 > Task :expo-modules-core:mapReleaseSourceSetPaths
@@ -299,66 +526,28 @@ Android node_modules\expo\AppEntry.js ÔûôÔûôÔûôÔûôÔûôÔûôÔûô
 > Task :expo-modules-core:stripReleaseDebugSymbols
 
 > Task :app:createBundleReleaseJsAndAssets
-Android node_modules\expo\AppEntry.js ÔûôÔûôÔûôÔûôÔûôÔûôÔûôÔûôÔûôÔûôÔûôÔûôÔûæÔûæÔûæÔûæ 81.0% (101/214)
-
-> Task :expo:mergeReleaseResources
-
-> Task :app:createBundleReleaseJsAndAssets
-Android node_modules\expo\AppEntry.js ÔûôÔûôÔûôÔûôÔûôÔûôÔûôÔûôÔûôÔûôÔûôÔûôÔûæÔûæÔûæÔûæ 81.0% (245/378)
+Android node_modules\expo\AppEntry.js ÔûôÔûôÔûôÔûôÔûôÔûôÔûôÔûôÔûôÔûôÔûôÔûôÔûôÔûæÔûæÔûæ 82.0% (156/302)
+Android node_modules\expo\AppEntry.js ÔûôÔûôÔûôÔûôÔûôÔûôÔûôÔûôÔûôÔûôÔûôÔûôÔûôÔûæÔûæÔûæ 82.0% (517/612)
 
 > Task :expo-modules-core:mergeReleaseResources
 > Task :expo-modules-core:copyReleaseJniLibsProjectAndLocalJars
-
-> Task :app:createBundleReleaseJsAndAssets
-Android node_modules\expo\AppEntry.js ÔûôÔûôÔûôÔûôÔûôÔûôÔûôÔûôÔûôÔûôÔûôÔûôÔûæÔûæÔûæÔûæ 81.0% (429/487)
-
-> Task :react-native-safe-area-context:compileReleaseKotlin
-w: file:///C:/Users/90552/Desktop/Mobile%20Apps/BallWorld/node_modules/react-native-safe-area-context/android/src/main/java/com/th3rdwave/safeareacontext/SafeAreaView.kt:59:23 'val uiImplementation: UIImplementation!' is deprecated. Deprecated in Java.
-
 > Task :react-native-safe-area-context:verifyReleaseResources
-> Task :react-native-safe-area-context:compileReleaseJavaWithJavac
-
-> Task :app:createBundleReleaseJsAndAssets
-Android node_modules\expo\AppEntry.js ÔûôÔûôÔûôÔûôÔûôÔûôÔûôÔûôÔûôÔûôÔûôÔûôÔûôÔûôÔûôÔûæ 99.6% (563/564)
-
+> Task :react-native-safe-area-context:assembleRelease
+> Task :react-native-google-mobile-ads:verifyReleaseResources
+> Task :react-native-google-mobile-ads:assembleRelease
 > Task :react-native-async-storage_async-storage:verifyReleaseResources
 > Task :react-native-async-storage_async-storage:assembleRelease
-> Task :react-native-safe-area-context:bundleLibRuntimeToJarRelease
-> Task :react-native-safe-area-context:processReleaseJavaRes
-> Task :react-native-safe-area-context:createFullJarRelease
-> Task :react-native-safe-area-context:bundleLibRuntimeToDirRelease
-> Task :react-native-safe-area-context:generateReleaseLintModel
-> Task :react-native-safe-area-context:bundleLibCompileToJarRelease
-> Task :react-native-safe-area-context:extractReleaseAnnotations
-> Task :react-native-safe-area-context:mergeReleaseGeneratedProguardFiles
-> Task :react-native-safe-area-context:mergeReleaseConsumerProguardFiles
-> Task :react-native-safe-area-context:generateReleaseLintVitalModel
-> Task :react-native-safe-area-context:mergeReleaseJavaResource
-> Task :react-native-safe-area-context:syncReleaseLibJars
-> Task :react-native-safe-area-context:bundleReleaseLocalLintAar
-> Task :react-native-safe-area-context:bundleReleaseAar
-> Task :react-native-safe-area-context:assembleRelease
+> Task :expo:verifyReleaseResources
 > Task :expo-modules-core:verifyReleaseResources
 
 > Task :app:createBundleReleaseJsAndAssets
-Android node_modules\expo\AppEntry.js ÔûôÔûôÔûôÔûôÔûôÔûôÔûôÔûôÔûôÔûôÔûôÔûôÔûôÔûôÔûôÔûæ 99.9% (631/631)
-Android Bundled 29130ms node_modules\expo\AppEntry.js (631 modules)
+Android node_modules\expo\AppEntry.js ÔûôÔûôÔûôÔûôÔûôÔûôÔûôÔûôÔûôÔûôÔûôÔûôÔûôÔûôÔûôÔûæ 99.9% (757/757)
+Android Bundled 18138ms node_modules\expo\AppEntry.js (757 modules)
 Writing bundle output to: android\app\build\generated\assets\createBundleReleaseJsAndAssets\index.android.bundle
 Writing sourcemap output to: android\app\build\intermediates\sourcemaps\react\release\index.android.bundle.packager.map
 Copying 5 asset files
 Done writing bundle output
-
-> Task :expo:verifyReleaseResources
-> Task :react-native-async-storage_async-storage:lintVitalAnalyzeRelease
-> Task :expo-modules-core:compileReleaseKotlin
-
-> Task :app:createBundleReleaseJsAndAssets
 Done writing sourcemap output
-
-> Task :app:preBuild
-> Task :app:preReleaseBuild
-> Task :app:configureCMakeRelWithDebInfo[arm64-v8a]
-> Task :react-native-safe-area-context:lintVitalAnalyzeRelease
 
 > Task :expo-modules-core:compileReleaseKotlin
 w: file:///C:/Users/90552/Desktop/Mobile%20Apps/BallWorld/node_modules/expo-modules-core/android/src/main/java/expo/modules/adapters/react/apploader/RNHeadlessAppLoader.kt:48:87 'val reactNativeHost: ReactNativeHost' is deprecated. You should not use ReactNativeHost directly in the New Architecture. Use ReactHost instead.
@@ -376,6 +565,9 @@ w: file:///C:/Users/90552/Desktop/Mobile%20Apps/BallWorld/node_modules/expo-modu
 w: file:///C:/Users/90552/Desktop/Mobile%20Apps/BallWorld/node_modules/expo-modules-core/android/src/main/java/expo/modules/kotlin/views/ViewManagerDefinition.kt:41:16 'val errorManager: JSLoggerModule?' is deprecated. Use AppContext.jsLogger instead.
 w: file:///C:/Users/90552/Desktop/Mobile%20Apps/BallWorld/node_modules/expo-modules-core/android/src/main/java/expo/modules/kotlin/views/ViewManagerDefinition.kt:41:30 'fun reportExceptionToLogBox(codedException: CodedException): Unit' is deprecated. Use appContext.jsLogger.error(...) instead.
 
+> Task :app:preBuild
+> Task :app:preReleaseBuild
+
 > Task :expo-modules-core:compileReleaseJavaWithJavac
 Note: Some input files use or override a deprecated API.
 Note: Recompile with -Xlint:deprecation for details.
@@ -386,17 +578,18 @@ Note: Recompile with -Xlint:deprecation for details.
 > Task :expo-modules-core:extractReleaseAnnotations
 > Task :expo-modules-core:mergeReleaseGeneratedProguardFiles
 > Task :expo-modules-core:mergeReleaseConsumerProguardFiles
+> Task :expo-modules-core:generateReleaseLintVitalModel
 > Task :expo-modules-core:mergeReleaseJavaResource
+> Task :expo-modules-core:bundleLibRuntimeToJarRelease
 
 > Task :expo-constants:compileReleaseKotlin
 w: file:///C:/Users/90552/Desktop/Mobile%20Apps/BallWorld/node_modules/expo-constants/android/src/main/java/expo/modules/constants/ConstantsModule.kt:12:5 'fun Constants(legacyConstantsProvider: () -> Map<String, Any?>): Unit' is deprecated. Use `Constant` or `Property` instead.
 
-> Task :expo-modules-core:bundleLibRuntimeToJarRelease
 > Task :expo-constants:compileReleaseJavaWithJavac
 > Task :expo-constants:bundleLibCompileToJarRelease
 > Task :expo-constants:bundleLibRuntimeToJarRelease
-> Task :expo-constants:processReleaseJavaRes
 > Task :expo-constants:bundleLibRuntimeToDirRelease
+> Task :expo-constants:processReleaseJavaRes
 > Task :expo-constants:createFullJarRelease
 > Task :expo-constants:extractReleaseAnnotations
 > Task :expo-constants:mergeReleaseGeneratedProguardFiles
@@ -406,15 +599,26 @@ w: file:///C:/Users/90552/Desktop/Mobile%20Apps/BallWorld/node_modules/expo-cons
 > Task :expo-constants:bundleReleaseLocalLintAar
 > Task :expo-constants:bundleReleaseAar
 > Task :expo-constants:assembleRelease
+
+> Task :app:configureCMakeRelWithDebInfo[arm64-v8a]
+C/C++: CMake Warning in C:/Users/90552/Desktop/Mobile Apps/BallWorld/node_modules/react-native-google-mobile-ads/android/build/generated/source/codegen/jni/CMakeLists.txt:
+C/C++:   The object file directory
+C/C++:     C:/Users/90552/Desktop/Mobile Apps/BallWorld/android/app/.cxx/RelWithDebInfo/21492m50/arm64-v8a/RNGoogleMobileAdsSpec_autolinked_build/CMakeFiles/react_codegen_RNGoogleMobileAdsSpec.dir/./
+C/C++:   has 188 characters.  The maximum full path to an object file is 250
+C/C++:   characters (see CMAKE_OBJECT_PATH_MAX).  Object file
+C/C++:     react/renderer/components/RNGoogleMobileAdsSpec/RNGoogleMobileAdsSpecJSI-generated.cpp.o
+C/C++:   cannot be safely placed under this directory.  The build may not work
+C/C++:   correctly.
+
 > Task :expo-modules-core:syncReleaseLibJars
 > Task :expo-modules-core:createFullJarRelease
-> Task :app:buildCMakeRelWithDebInfo[arm64-v8a]
 > Task :expo-constants:generateReleaseLintModel
-> Task :expo-constants:generateReleaseLintVitalModel
 > Task :expo-modules-core:bundleReleaseLocalLintAar
-> Task :expo-modules-core:generateReleaseLintVitalModel
+> Task :expo-constants:generateReleaseLintVitalModel
 > Task :expo-modules-core:bundleReleaseAar
 > Task :expo-modules-core:assembleRelease
+> Task :expo-constants:lintVitalAnalyzeRelease
+> Task :expo-modules-core:bundleLibRuntimeToDirRelease
 
 > Task :expo:compileReleaseKotlin
 w: file:///C:/Users/90552/Desktop/Mobile%20Apps/BallWorld/node_modules/expo/android/src/main/java/expo/modules/ExpoModulesPackage.kt:34:16 This declaration overrides a deprecated member but is not marked as deprecated itself. Add the '@Deprecated' annotation or suppress the diagnostic.
@@ -441,16 +645,12 @@ w: file:///C:/Users/90552/Desktop/Mobile%20Apps/BallWorld/node_modules/expo/andr
 w: file:///C:/Users/90552/Desktop/Mobile%20Apps/BallWorld/node_modules/expo/android/src/main/java/expo/modules/fetch/NativeResponse.kt:42:16 This declaration overrides a deprecated member but is not marked as deprecated itself. Add the '@Deprecated' annotation or suppress the diagnostic.
 w: file:///C:/Users/90552/Desktop/Mobile%20Apps/BallWorld/node_modules/expo/android/src/main/java/expo/modules/fetch/NativeResponse.kt:44:11 'fun deallocate(): Unit' is deprecated. Use sharedObjectDidRelease() instead.
 
-> Task :expo-constants:lintVitalAnalyzeRelease
-> Task :expo-modules-core:bundleLibRuntimeToDirRelease
 > Task :expo:compileReleaseJavaWithJavac
 > Task :expo:processReleaseJavaRes
 > Task :expo:bundleLibRuntimeToJarRelease
-> Task :expo:bundleLibRuntimeToDirRelease
-> Task :expo:bundleLibCompileToJarRelease
-> Task :app:configureCMakeRelWithDebInfo[armeabi-v7a]
 > Task :expo:generateReleaseLintModel
 > Task :expo:createFullJarRelease
+> Task :expo:bundleLibRuntimeToDirRelease
 > Task :expo:extractReleaseAnnotations
 > Task :expo:mergeReleaseGeneratedProguardFiles
 > Task :expo:mergeReleaseConsumerProguardFiles
@@ -460,20 +660,53 @@ w: file:///C:/Users/90552/Desktop/Mobile%20Apps/BallWorld/node_modules/expo/andr
 > Task :expo:generateReleaseLintVitalModel
 > Task :expo:bundleReleaseAar
 > Task :expo:assembleRelease
-> Task :expo-modules-core:lintVitalAnalyzeRelease
+> Task :expo:bundleLibCompileToJarRelease
 > Task :expo:lintVitalAnalyzeRelease
+> Task :app:buildCMakeRelWithDebInfo[arm64-v8a]
+> Task :expo-modules-core:lintVitalAnalyzeRelease
+
+> Task :app:configureCMakeRelWithDebInfo[armeabi-v7a]
+C/C++: CMake Warning in C:/Users/90552/Desktop/Mobile Apps/BallWorld/node_modules/react-native-google-mobile-ads/android/build/generated/source/codegen/jni/CMakeLists.txt:
+C/C++:   The object file directory
+C/C++:     C:/Users/90552/Desktop/Mobile Apps/BallWorld/android/app/.cxx/RelWithDebInfo/21492m50/armeabi-v7a/RNGoogleMobileAdsSpec_autolinked_build/CMakeFiles/react_codegen_RNGoogleMobileAdsSpec.dir/./
+C/C++:   has 190 characters.  The maximum full path to an object file is 250
+C/C++:   characters (see CMAKE_OBJECT_PATH_MAX).  Object file
+C/C++:     react/renderer/components/RNGoogleMobileAdsSpec/RNGoogleMobileAdsSpecJSI-generated.cpp.o
+C/C++:   cannot be safely placed under this directory.  The build may not work
+C/C++:   correctly.
+
 > Task :app:buildCMakeRelWithDebInfo[armeabi-v7a]
+
 > Task :app:configureCMakeRelWithDebInfo[x86]
+C/C++: CMake Warning in C:/Users/90552/Desktop/Mobile Apps/BallWorld/node_modules/react-native-google-mobile-ads/android/build/generated/source/codegen/jni/CMakeLists.txt:
+C/C++:   The object file directory
+C/C++:     C:/Users/90552/Desktop/Mobile Apps/BallWorld/android/app/.cxx/RelWithDebInfo/21492m50/x86/RNGoogleMobileAdsSpec_autolinked_build/CMakeFiles/react_codegen_RNGoogleMobileAdsSpec.dir/./
+C/C++:   has 182 characters.  The maximum full path to an object file is 250
+C/C++:   characters (see CMAKE_OBJECT_PATH_MAX).  Object file
+C/C++:     react/renderer/components/RNGoogleMobileAdsSpec/RNGoogleMobileAdsSpecJSI-generated.cpp.o
+C/C++:   cannot be safely placed under this directory.  The build may not work
+C/C++:   correctly.
+
 > Task :app:buildCMakeRelWithDebInfo[x86]
+
 > Task :app:configureCMakeRelWithDebInfo[x86_64]
+C/C++: CMake Warning in C:/Users/90552/Desktop/Mobile Apps/BallWorld/node_modules/react-native-google-mobile-ads/android/build/generated/source/codegen/jni/CMakeLists.txt:
+C/C++:   The object file directory
+C/C++:     C:/Users/90552/Desktop/Mobile Apps/BallWorld/android/app/.cxx/RelWithDebInfo/21492m50/x86_64/RNGoogleMobileAdsSpec_autolinked_build/CMakeFiles/react_codegen_RNGoogleMobileAdsSpec.dir/./
+C/C++:   has 185 characters.  The maximum full path to an object file is 250
+C/C++:   characters (see CMAKE_OBJECT_PATH_MAX).  Object file
+C/C++:     react/renderer/components/RNGoogleMobileAdsSpec/RNGoogleMobileAdsSpecJSI-generated.cpp.o
+C/C++:   cannot be safely placed under this directory.  The build may not work
+C/C++:   correctly.
+
 > Task :app:buildCMakeRelWithDebInfo[x86_64]
 > Task :app:mergeReleaseJniLibFolders
 > Task :app:generateReleaseBuildConfig
 > Task :app:generateReleaseResValues
 > Task :app:mapReleaseSourceSetPaths
-> Task :app:checkReleaseDuplicateClasses
-> Task :app:checkReleaseAarMetadata
 > Task :app:generateReleaseResources
+> Task :app:checkReleaseAarMetadata
+> Task :app:checkReleaseDuplicateClasses
 > Task :app:packageReleaseResources
 > Task :app:createReleaseCompatibleScreenManifests
 > Task :app:extractDeepLinksRelease
@@ -485,29 +718,25 @@ C:\Users\90552\Desktop\Mobile Apps\BallWorld\android\app\src\main\AndroidManifes
 
 > Task :app:processReleaseManifest
 > Task :app:javaPreCompileRelease
+> Task :app:processReleaseManifestForPackage
 > Task :app:desugarReleaseFileDependencies
 > Task :app:mergeReleaseStartupProfile
 > Task :app:mergeReleaseResources
-> Task :app:mergeReleaseNativeLibs
 > Task :app:mergeReleaseShaders
 > Task :app:mergeReleaseArtProfile
 > Task :app:compileReleaseShaders NO-SOURCE
 > Task :app:generateReleaseAssets UP-TO-DATE
 > Task :app:mergeReleaseAssets
-> Task :app:compressReleaseAssets
-> Task :app:stripReleaseDebugSymbols
 > Task :app:extractReleaseVersionControlInfo
+> Task :app:compressReleaseAssets
 > Task :app:extractProguardFiles
-> Task :app:extractReleaseNativeSymbolTables
 > Task :app:collectReleaseDependencies
 > Task :app:sdkReleaseDependencyData
 > Task :app:validateSigningRelease
 > Task :app:writeReleaseAppMetadata
 > Task :app:writeReleaseSigningConfigVersions
-> Task :app:processReleaseManifestForPackage
 > Task :app:processReleaseResources
-> Task :app:mergeExtDexRelease
-> Task :app:mergeReleaseNativeDebugMetadata
+> Task :app:mergeReleaseNativeLibs
 > Task :app:optimizeReleaseResources
 
 > Task :app:compileReleaseKotlin
@@ -515,15 +744,19 @@ w: file:///C:/Users/90552/Desktop/Mobile%20Apps/BallWorld/android/app/src/main/j
 w: file:///C:/Users/90552/Desktop/Mobile%20Apps/BallWorld/android/app/src/main/java/com/alperencelebi/cosmoclash/MainApplication.kt:21:16 This declaration overrides a deprecated member but is not marked as deprecated itself. Add the '@Deprecated' annotation or suppress the diagnostic.
 w: file:///C:/Users/90552/Desktop/Mobile%20Apps/BallWorld/android/app/src/main/java/com/alperencelebi/cosmoclash/MainApplication.kt:21:33 'class ReactNativeHost : Any' is deprecated. Deprecated in Java.
 
+> Task :app:stripReleaseDebugSymbols
 > Task :app:compileReleaseJavaWithJavac
 > Task :app:dexBuilderRelease
-> Task :app:mergeReleaseGlobalSynthetics
 > Task :app:generateReleaseLintVitalReportModel
+> Task :app:mergeReleaseGlobalSynthetics
+> Task :app:extractReleaseNativeSymbolTables
 > Task :app:processReleaseJavaRes
-> Task :app:lintVitalAnalyzeRelease
+> Task :app:mergeExtDexRelease
 > Task :app:mergeReleaseJavaResource
+> Task :app:lintVitalAnalyzeRelease
 > Task :app:lintVitalReportRelease
 > Task :app:lintVitalRelease
+> Task :app:mergeReleaseNativeDebugMetadata
 > Task :app:mergeDexRelease
 > Task :app:compileReleaseArtProfile
 > Task :app:packageRelease
@@ -538,5 +771,5 @@ You can use '--warning-mode all' to show the individual deprecation warnings and
 
 For more on this, please refer to https://docs.gradle.org/8.14.3/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
 
-BUILD SUCCESSFUL in 3m
-306 actionable tasks: 282 executed, 24 up-to-date
+BUILD SUCCESSFUL in 2m 11s
+349 actionable tasks: 325 executed, 24 up-to-date

@@ -1,0 +1,57 @@
+Canlıya Alma ve Google Play Store Yükleme Adımları
+
+1. Hazırlık ve Versiyonlama
+---------------------------------------------------------
+- app.json dosyasındaki "version" alanını güncelleyin (örn: "1.0.0" -> "1.0.1").
+- android/app/build.gradle dosyasındaki "versionCode"u 1 artırın ve "versionName"i güncelleyin.
+- Projenin hatasız çalıştığından emin olun.
+
+2. AAB (Android App Bundle) Oluşturma
+---------------------------------------------------------
+Google Play Store artık APK yerine AAB formatını zorunlu kılmaktadır.
+
+Yöntem A: EAS Build (Önerilen)
+- Terminalde şu komutu çalıştırın:
+  eas build --platform android
+- "Build type" sorulursa "production" veya "aab" seçin.
+- İşlem bitince EAS dashboard'dan veya terminalden .aab dosyasını indirin.
+
+Yöntem B: Yerel Gradle Build (Mevcut 'android' klasörü ile)
+- Terminalde android klasörüne gidin:
+  cd android
+- Release bundle komutunu çalıştırın:
+  ./gradlew bundleRelease
+- Oluşan dosya genellikle şurada bulunur:
+  android/app/build/outputs/bundle/release/app-release.aab
+
+3. Google Play Console İşlemleri
+---------------------------------------------------------
+- Google Play Console hesabınıza giriş yapın.
+- "Uygulama oluştur" butonuna tıklayın.
+- Uygulama adı ("Cosmo Clash"), dil ve uygulama türünü seçin.
+- "Kontrol Paneli"ndeki adımları takip edin:
+  - Kısa ve uzun açıklamaları girin.
+  - Ekran görüntülerini (telefon, 7 inç tablet, 10 inç tablet) yükleyin.
+  - Uygulama simgesini (512x512) ve özellik grafiğini (1024x500) yükleyin.
+
+4. Gizlilik Politikası ve Web Sitesi (GitHub Pages ile)
+---------------------------------------------------------
+- Projenizin ana dizininde 'docs' klasörü oluşturduk.
+- Bu klasörün içinde 'index.html' (Tanıtım Sitesi) ve 'privacy-policy.html' (Gizlilik Politikası) dosyaları hazırlandı.
+- Bu değişiklikleri GitHub'a "push"layın (commit & push).
+- GitHub deponuzda "Settings" -> "Pages" sekmesine gidin.
+- "Source" kısmından "Deploy from a branch" seçin.
+- "Branch" olarak "main" (veya master) ve klasör olarak "/docs" seçip "Save"e tıklayın.
+- Birkaç dakika sonra size verilen link (örn: https://kullaniciadi.github.io/repo-adi/) sizin web siteniz olacaktır.
+- Bu linki Google Play Console'da "Mağaza Girişi" ve "Uygulama İçeriği" -> "Gizlilik Politikası" kısımlarına ekleyin.
+  - Web sitesi: https://kullaniciadi.github.io/repo-adi/
+  - Gizlilik Politikası: https://kullaniciadi.github.io/repo-adi/privacy-policy.html
+
+5. AAB Yükleme ve Yayınlama
+---------------------------------------------------------
+- Play Console'da "Üretim" (Production) veya "Test" (Internal/Closed Testing) kanalına gidin.
+- "Yeni sürüm oluştur"a tıklayın.
+- Oluşturduğunuz .aab dosyasını buraya yükleyin.
+- Sürüm notlarını girin.
+- "Sürümü incele" ve ardından "Yayınlamayı başlat" butonlarına tıklayarak gönderin.
+- İnceleme süreci ardından uygulamanız yayına girecektir.
