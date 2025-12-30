@@ -1,0 +1,10 @@
+# Ignore native folders - EAS will regenerate them
+android/
+ios/
+
+# Local files
+*.log
+*.txt
+build_*.bat
+local.properties
+

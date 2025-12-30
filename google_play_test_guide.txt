@@ -1,0 +1,110 @@
+Google Play Console - Kapalı Test (Closed Testing) Hazırlık Rehberi
+
+Bu dosya, 'Cosmo Clash' uygulamanızı Google Play Console'da Kapalı Test (Closed Testing) olarak yayınlarken doldurmanız gereken alanları ve önerilen cevapları içerir.
+
+1. Uygulama Oluşturma (Create App)
+---------------------------------------------------------
+- Uygulama Adı (App Name): Cosmo Clash
+- Varsayılan Dil (Default Language): İngilizce (en-US) veya Türkçe (tr-TR) - Hedef kitlenize göre seçin. İngilizce global erişim için önerilir.
+- Uygulama/Oyun (App or Game): Oyun (Game)
+- Ücretli/Ücretsiz (Free or Paid): Ücretsiz (Free)
+- Beyanlar (Declarations):
+  - Geliştirici Program Politikaları'nı kabul ediyorum: [X] Evet
+  - ABD ihracat yasalarına uyuyorum: [X] Evet
+
+2. Uygulama Kurulumu (App Setup) - Kontrol Paneli Görevleri
+---------------------------------------------------------
+
+a) Gizlilik Politikası (Privacy Policy):
+   - URL: https://alpcelebi.github.io/cosmo-clash/privacy-policy.html
+
+b) Uygulama Erişimi (App Access):
+   - Soru: Uygulamanızın bazı bölümleri kısıtlanmış mı? (Giriş yapma, üyelik vb.)
+   - Cevap: Tüm işlevler özel erişim gerektirmeden kullanılabilir. (All functionality is available without special access)
+
+c) Reklamlar (Ads):
+   - Soru: Uygulamanız reklam içeriyor mu?
+   - Cevap: Evet, uygulamam reklam içeriyor. (Yes, my app contains ads)
+
+d) İçerik Derecelendirme (Content Rating):
+   - "Yeni anket başlat" butonuna tıklayın.
+   - Kategori: Oyun (Game)
+   - Şiddet (Violence): Hayır (No) - Uzay gemileri ve soyut nesneler olduğu için "Fantezi şiddeti" belki, ama genellikle "Hayır" seçilir eğer kan/vahşet yoksa.
+   - Korku (Fear): Hayır
+   - Cinsellik (Sexuality): Hayır
+   - Kumar (Simulated Gambling): Hayır
+   - Dil (Language): Hayır
+   - Kontrollü Maddeler (Controlled Substances): Hayır
+   - Çeşitli (Miscellaneous):
+     - Uygulama doğal olarak iletişime izin veriyor mu (sohbet vb.)? Hayır
+     - Uygulama fiziksel konumu paylaşıyor mu? Hayır
+     - Uygulama dijital ürün satın almaya izin veriyor mu? Hayır
+
+e) Hedef Kitle (Target Audience):
+   - Hedef Yaş Grupları: 13-15, 16-17, 18 ve üzeri. (Çocuklara özel tasarlanmadıysa "13 yaş altı"nı işaretlememek süreci kolaylaştırır.)
+   - Çocuklara hitap etme durumu:
+     - Soru: Mağaza girişiniz çocuklara hitap edebilir mi?
+     - Cevap: Evet (Çünkü oyun renkli ve arcade tarzında). Ancak "Özellikle çocuklar için tasarlandı (Designed for Families)" programına katılmak zorunda değilsiniz. Google bunu "İstemeden çocuklara hitap etme" olarak değerlendirebilir, dikkatli olun. En güvenli cevap genellikle: "Hayır" diyerek uygulamanın genel kitleye hitap ettiğini belirtmektir.
+
+f) Haber Uygulamaları (News Apps):
+   - Cevap: Hayır, bir haber uygulaması değildir.
+
+g) COVID-19 Temas İzleme ve Durumu:
+   - Cevap: Uygulamam halka açık bir COVID-19 temas izleme veya durum uygulaması değildir.
+
+h) Veri Güvenliği (Data Safety):
+   - Veri toplama ve paylaşma:
+     - Soru: Uygulamanız herhangi bir kullanıcı verisi topluyor veya paylaşıyor mu?
+     - Cevap: Evet. (Google Mobile Ads SDK kullandığımız için)
+   - Toplanan Veriler (Google AdMob için standart):
+     - Konum (Location): Yaklaşık konum (Coarse Location) - Reklamlar ve analiz için.
+     - Uygulama Etkinliği (App Activity): Uygulama etkileşimleri.
+     - Cihaz veya diğer kimlikler (Device or other IDs): Cihaz ID'si - Reklam ve analiz için.
+   - Güvenlik:
+     - Veriler şifreleniyor mu? Evet (Https).
+     - Kullanıcılar verilerinin silinmesini isteyebilir mi? Hayır (Genellikle reklam ID'leri için).
+
+i) Devlet Uygulamaları:
+   - Cevap: Hayır, bu uygulama bir devlet kurumunu temsiletmemektedir.
+
+3. Mağaza Girişi (Store Listing)
+---------------------------------------------------------
+a) Uygulama Adı (App Name): Cosmo Clash
+b) Kısa Açıklama (Short Description) (Maks 80 karakter):
+   - Öneri: "Conquer the galaxy in this epic retro-style space shooter arcade game!"
+   - Alternatif: "Uzaylıları yok et ve galaksinin hakimi ol! Heyecan dolu arcade oyunu."
+c) Tam Açıklama (Full Description) (Maks 4000 karakter):
+   - Öneri:
+     "Get ready for the ultimate space battle! Cosmo Clash brings the classic arcade shooter experience to your mobile device with modern graphics and intense gameplay.
+
+     Features:
+     - Fast-paced Action: Dodge meteors, destroy enemy swarms, and survive endless waves.
+     - Stunning Visuals: Vibrant neon graphics and immersive space environments.
+     - Power-ups: Collect unique upgrades to boost your firepower.
+     - Global Leaderboards: Challenge your friends and players worldwide.
+     - Easy Controls: Intuitive touch controls designed for mobile.
+
+     Join the cosmic war and defend the galaxy. Download Cosmo Clash and start your adventure today!"
+
+d) Grafikler (Graphics):
+   - Uygulama Simgesi (App Icon): 512x512 px, PNG formatında (assets/icon.png kullanabilirsiniz ama arka plan şeffaf olmamalı).
+   - Özellik Grafiği (Feature Graphic): 1024x500 px, PNG/JPG. (Oyunun logosunu ve aksiyon sahnesini içeren bir görsel).
+   - Telefon Ekran Görüntüleri (Phone Screenshots): En az 2 adet, 16:9 veya 9:16 oranında. (assets/docs/screenshot.png benzeri oyun içi görüntüler).
+   - 7 inç ve 10 inç Tablet Ekran Görüntüleri: Telefon ekran görüntüleri ile aynı görselleri yükleyebilirsiniz.
+
+4. Test Sürümü (Testing Release)
+---------------------------------------------------------
+a) Test Ediciler (Testers):
+   - "Kapalı Test" (Closed Testing) sekmesine gidin.
+   - Bir e-posta listesi oluşturun ve oyunu test edecek kişilerin (kendi e-postanız ve arkadaşlarınızın) Gmail adreslerini ekleyin.
+   - Google artık yeni kişisel hesaplar için min. 20 test kullanıcısının 14 gün boyunca testi sürdürmesini şart koşuyor.
+
+b) Yeni Sürüm Oluştur (Create New Release):
+   - Ülke/Bölge seçimi: Testin geçerli olacağı ülkeleri seçin (Türkiye vb.).
+   - Sürüm Adı: 1.0.0 (Otomatik gelebilir).
+   - App Bundle (.aab) dosyasını buraya yükleyin.
+   - Sürüm Notları: "Initial release for testing. Enjoy the game!"
+
+5. İnceleme Gönderme
+---------------------------------------------------------
+Tüm adımlar tamamlandığında "Dashboard" (Kontrol Paneli) üzerinden incelemeye gönder butonuna basarak projeyi Google'ın onayına sunun.
