@@ -7,6 +7,9 @@ https://alpcelebi.github.io/cosmo-clash/
 Gizlilik Politikası (Google Play için):
 https://alpcelebi.github.io/cosmo-clash/privacy-policy.html
 
+Google Play Store Link:
+https://play.google.com/store/apps/details?id=com.alperencelebi.cosmoclash
+
 GitHub Deposu:
 https://github.com/alpcelebi/cosmo-clash
  
