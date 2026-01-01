@@ -92,26 +92,192 @@
             min-width: 300px;
             text-align: center;
             position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
-        .hero-image img {
-            max-width: 100%;
-            border-radius: 20px;
-            box-shadow: 0 0 50px rgba(108, 99, 255, 0.2);
+        /* Planet System Animation */
+        .planet-system {
+            position: relative;
+            width: 280px;
+            height: 280px;
             animation: float 6s ease-in-out infinite;
         }
 
+        .planet {
+            position: absolute;
+            border-radius: 50%;
+            animation: rotate 20s linear infinite;
+        }
+
+        /* Main Planet - Saturn-like */
+        .planet-main {
+            width: 120px;
+            height: 120px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: linear-gradient(135deg, #E8B86D 0%, #C9A227 50%, #8B7355 100%);
+            box-shadow:
+                inset -20px -10px 40px rgba(0, 0, 0, 0.4),
+                inset 10px 10px 20px rgba(255, 255, 255, 0.2),
+                0 0 60px rgba(232, 184, 109, 0.4);
+            animation: pulse 4s ease-in-out infinite;
+        }
+
+        /* Saturn Ring */
+        .planet-ring {
+            position: absolute;
+            width: 180px;
+            height: 40px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotateX(75deg);
+            border: 8px solid rgba(200, 180, 140, 0.6);
+            border-radius: 50%;
+            background: transparent;
+            box-shadow: 0 0 20px rgba(200, 180, 140, 0.3);
+        }
+
+        /* Small orbiting planets */
+        .planet-small-1 {
+            width: 30px;
+            height: 30px;
+            background: linear-gradient(135deg, #4ECDC4 0%, #2A9D8F 100%);
+            box-shadow:
+                inset -5px -5px 15px rgba(0, 0, 0, 0.3),
+                0 0 20px rgba(78, 205, 196, 0.5);
+            animation: orbit1 8s linear infinite;
+        }
+
+        .planet-small-2 {
+            width: 20px;
+            height: 20px;
+            background: linear-gradient(135deg, #FF6584 0%, #FF4757 100%);
+            box-shadow:
+                inset -3px -3px 10px rgba(0, 0, 0, 0.3),
+                0 0 15px rgba(255, 101, 132, 0.5);
+            animation: orbit2 12s linear infinite reverse;
+        }
+
+        .planet-small-3 {
+            width: 25px;
+            height: 25px;
+            background: linear-gradient(135deg, #6C63FF 0%, #5A52D5 100%);
+            box-shadow:
+                inset -4px -4px 12px rgba(0, 0, 0, 0.3),
+                0 0 18px rgba(108, 99, 255, 0.5);
+            animation: orbit3 15s linear infinite;
+        }
+
         @keyframes float {
-            0% {
+
+            0%,
+            100% {
                 transform: translateY(0px);
             }
 
             50% {
-                transform: translateY(-20px);
+                transform: translateY(-15px);
+            }
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                box-shadow: inset -20px -10px 40px rgba(0, 0, 0, 0.4), inset 10px 10px 20px rgba(255, 255, 255, 0.2), 0 0 60px rgba(232, 184, 109, 0.4);
+            }
+
+            50% {
+                box-shadow: inset -20px -10px 40px rgba(0, 0, 0, 0.4), inset 10px 10px 20px rgba(255, 255, 255, 0.2), 0 0 80px rgba(232, 184, 109, 0.6);
+            }
+        }
+
+        @keyframes orbit1 {
+            0% {
+                top: 10%;
+                left: 50%;
+            }
+
+            25% {
+                top: 50%;
+                left: 90%;
+            }
+
+            50% {
+                top: 90%;
+                left: 50%;
+            }
+
+            75% {
+                top: 50%;
+                left: 10%;
             }
 
             100% {
-                transform: translateY(0px);
+                top: 10%;
+                left: 50%;
+            }
+        }
+
+        @keyframes orbit2 {
+            0% {
+                top: 20%;
+                left: 20%;
+            }
+
+            25% {
+                top: 20%;
+                left: 80%;
+            }
+
+            50% {
+                top: 80%;
+                left: 80%;
+            }
+
+            75% {
+                top: 80%;
+                left: 20%;
+            }
+
+            100% {
+                top: 20%;
+                left: 20%;
+            }
+        }
+
+        @keyframes orbit3 {
+            0% {
+                top: 5%;
+                left: 30%;
+            }
+
+            33% {
+                top: 70%;
+                left: 85%;
+            }
+
+            66% {
+                top: 85%;
+                left: 15%;
+            }
+
+            100% {
+                top: 5%;
+                left: 30%;
+            }
+        }
+
+        @keyframes rotate {
+            from {
+                transform: translate(-50%, -50%) rotate(0deg);
+            }
+
+            to {
+                transform: translate(-50%, -50%) rotate(360deg);
             }
         }
 
@@ -196,7 +362,13 @@
             </div>
 
             <div class="hero-image">
-                <img src="planet_icon.png" alt="Cosmo Clash Planet" style="width: 250px; height: 250px;">
+                <div class="planet-system">
+                    <div class="planet planet-main"></div>
+                    <div class="planet-ring"></div>
+                    <div class="planet planet-small-1"></div>
+                    <div class="planet planet-small-2"></div>
+                    <div class="planet planet-small-3"></div>
+                </div>
             </div>
 
         </section>
